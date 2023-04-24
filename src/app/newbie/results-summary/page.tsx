@@ -1,21 +1,9 @@
-import Head from "next/head";
-
-// Metadata
-export const metadata = {
-  title: "Ali Karagöz | Projects",
-  description:
-    "Bu zamana kadar yapmış olduğum bütün projeleri burada paylaşıyorum.",
-};
+import { AiOutlineThunderbolt,AiOutlineEye } from "react-icons/ai";
+import { BiBrain ,BiComment} from "react-icons/bi";
 
 export default function ResultsSummary() {
   return (
     <div>
-      <Head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content={metadata.description} />
-        <title>{metadata.title}</title>
-      </Head>
       <div className="results-summary">
         <div className="left">
           <h4>Your Result</h4>
@@ -33,7 +21,7 @@ export default function ResultsSummary() {
           <ul className="score-cards">
             <li>
               <div className="score-card">
-                <i className="fa-solid fa-bolt"></i>
+                <AiOutlineThunderbolt />
                 <div>
                   <span>Reaction</span>
                 </div>
@@ -46,7 +34,7 @@ export default function ResultsSummary() {
             </li>
             <li>
               <div className="score-card">
-                <i className="fa-solid fa-brain"></i>
+                <BiBrain/>
                 <div>
                   <span>Memory</span>
                 </div>
@@ -59,7 +47,7 @@ export default function ResultsSummary() {
             </li>
             <li>
               <div className="score-card">
-                <i className="fa-solid fa-comment"></i>
+                <BiComment/>
                 <div>
                   <span>Verbal</span>
                 </div>
@@ -72,7 +60,7 @@ export default function ResultsSummary() {
             </li>
             <li>
               <div className="score-card">
-                <i className="fa-solid fa-eye"></i>
+                <AiOutlineEye/>
                 <div>
                   <span>Visual</span>
                 </div>

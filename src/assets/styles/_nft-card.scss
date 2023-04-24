@@ -1,0 +1,69 @@
+.nft-card {
+  max-width: min-content;
+  padding: 20px;
+  background-color: #14273e;
+  border-radius: 12px;
+  &__top {
+    .nft-image {
+      width: 300px;
+      height: 300px
+      
+    }
+  }
+
+  &__bottom {
+    .nft-info {
+      .nft-name {
+        font-size: 18px;
+        font-weight: 600;
+        color: #fff;
+        margin-top: 10px;
+
+      }
+      .nft-description {
+        margin-top: 10px;
+        color: #62748d;
+        font-size: 16px;
+      }
+
+      &__bottom {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        font-size: 16px;
+        .nft-price {
+            color: #22ecef;
+            display: flex;
+            align-items: center;
+        }
+        .nft-due-date {
+          color: #62748d;
+        }
+      }
+    }
+
+    .seperator {
+      width: 100%;
+      height: 1px;
+      background-color: #62748d;
+      margin: 10px 0;
+    }
+    .nft-owner {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #62748d;
+        .owner-name {
+            color: #fff;
+        }
+      &__img {
+        width: 30px;
+        height: 30px;
+        img {
+          border-radius: 50%;
+          border: 1px solid #fff;
+        }
+      }
+    }
+  }
+}
