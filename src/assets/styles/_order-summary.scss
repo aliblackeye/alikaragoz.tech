@@ -1,0 +1,65 @@
+.order-summary {
+  background-color: #fff;
+  color: #8f92a4;
+  width: 400px;
+  border-radius: 20px;
+  text-align: center;
+
+  &__top {
+    background-color: #382ae5;
+    height: 200px;
+    border-radius: 20px 20px 0 0;
+  }
+  &__bottom {
+    padding: 40px;
+    .title {
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #1d294c;
+    }
+
+    .order-text {
+      margin-bottom: 20px;
+    }
+
+    .selected-plan {
+      display: flex;
+      border-radius: 20px;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      padding: 20px 10px;
+      background-color: #f8f9fe;
+      margin-bottom: 20px;
+      h2 {
+        font-size: 16px;
+        font-weight: 700;
+        color: #1d294c;
+      }
+
+      .music-icon {
+        background-color: #dfe6f8;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+        border-radius: 50%;
+      }
+    }
+
+    .payment-btn {
+      background-color: #382ae1;
+      margin-bottom: 20px;
+      box-shadow: 0px 10px 20px rgba($color: #382ae1, $alpha: .5) ;
+    }
+
+    .cancel-plan {
+      color: #1d294c;
+      text-decoration: none !important;
+    }
+  }
+}

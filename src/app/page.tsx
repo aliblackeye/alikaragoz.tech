@@ -52,6 +52,10 @@ export default function Home() {
       name: "QR Code",
       path: "intern/qr-code",
     },
+    {
+      name: "Order Summary",
+      path: "intern/order-summary",
+    },
   ];
 
   const junior: IProject[] = [];
