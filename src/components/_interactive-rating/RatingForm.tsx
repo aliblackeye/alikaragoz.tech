@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 // Import Types
-import { Rating } from "@/app/newbie/interactive-rating/page";
+import { Rating } from "@/app/intern/interactive-rating/page";
 
 // Import Components
 import { FaStar } from "react-icons/fa";
