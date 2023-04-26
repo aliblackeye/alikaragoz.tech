@@ -23,7 +23,7 @@ export default function InteractiveRating() {
           <p className="selected-rating">{`You selected ${rating} out of 5`}</p>
           <h1 className="selected-rating-title">Thank you!</h1>
           <p className="rated-description">
-            We appreciate you taking the time to give a rating. if you ever need more support. Don't hesitate to get in touch!
+            {`We appreciate you taking the time to give a rating. if you ever need more support. Don't hesitate to get in touch!`}
           </p>
         </div>
       ) : (
