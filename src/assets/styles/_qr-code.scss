@@ -1,6 +1,29 @@
-.qr-menu {
+.qr {
+  &-menu {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
     .qr-img {
-        width:100px;
-        height:100px;
+      background-color: #2b7dfa;
+      padding: 30px;
+      border-radius: 10px;
     }
+  }
+  &-bottom {
+    padding: 10px;
+    .qr-title {
+      font-size: 16px;
+      color: #333;
+      margin-top: 10px;
+      font-weight: 600;
+    }
+    .qr-desc {
+      font-size: 14px;
+      color: #333;
+      margin-top: 10px;
+    }
+  }
 }

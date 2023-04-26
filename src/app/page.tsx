@@ -48,6 +48,10 @@ export default function Home() {
       name: "Interactive Rating",
       path: "intern/interactive-rating",
     },
+    {
+      name: "QR Code",
+      path: "intern/qr-code",
+    },
   ];
 
   const junior: IProject[] = [];
