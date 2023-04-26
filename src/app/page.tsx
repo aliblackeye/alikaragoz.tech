@@ -34,19 +34,19 @@ export default function Home() {
   const intern: IProject[] = [
     {
       name: "Results Summary",
-      path: "newbie/results-summary",
+      path: "intern/results-summary",
     },
     {
       name: "Product Preview",
-      path: "newbie/product-preview-card",
+      path: "intern/product-preview-card",
     },
     {
       name: "NFT Card",
-      path: "newbie/nft-card",
+      path: "intern/nft-card",
     },
     {
       name: "Interactive Rating",
-      path: "newbie/interactive-rating",
+      path: "intern/interactive-rating",
     },
   ];
 
