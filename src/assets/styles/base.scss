@@ -5,18 +5,24 @@
 @import "./header";
 @import "./footer";
 @import "./nft-card";
-@import "./portfolio-owner";
+@import "./interactive-rating";
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Outfit", sans-serif;
+  user-select: none;
 }
 
 body {
   color: #fff;
-
+  background-color: #100922;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 li {
@@ -50,9 +56,9 @@ img {
   }
 
   &-info {
-    background-color: #007bff;
+    background-color: #045cb9;
     &:hover {
-      background-color: #0069d9;
+      background-color: #03519e;
     }
   }
 
@@ -65,18 +71,26 @@ img {
   }
 
   &-success {
-    background-color: #28a745;
+    background-color: #1c7631;
 
     &:hover {
-      background-color: #218838;
+      background-color: #155724;
+    }
+  }
+
+  &-warning {
+    background-color: #c7a008;
+
+    &:hover {
+      background-color: #a28f07;
     }
   }
 
   &-danger {
-    background-color: #dc3545;
+    background-color: #b62c3a;
 
     &:hover {
-      background-color: #c82333;
+      background-color: #88212a;
     }
   }
 }

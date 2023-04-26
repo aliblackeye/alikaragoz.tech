@@ -4,8 +4,8 @@
 import { useState, useEffect } from "react";
 
 // Import Components
-import PortfolioOwner, { IOwner } from "@/components/_home-page/PortfolioOwner";
-import ProjectCard from "@/components/_home-page/ProjectCard";
+import PortfolioOwner, { IOwner } from "@/components/_home/PortfolioOwner";
+import ProjectCard from "@/components/_home/ProjectCard";
 
 interface IProject {
   name: string;
@@ -31,33 +31,44 @@ export default function Home() {
     status: ownerStatus,
   };
 
-  const newbies: IProject[] = [
+  const intern: IProject[] = [
     {
       name: "Results Summary",
       path: "newbie/results-summary",
     },
     {
-      name: "Product Preview Card",
+      name: "Product Preview",
       path: "newbie/product-preview-card",
     },
     {
       name: "NFT Card",
       path: "newbie/nft-card",
     },
+    {
+      name: "Interactive Rating",
+      path: "newbie/interactive-rating",
+    },
   ];
 
-  const juniors: IProject[] = [];
+  const junior: IProject[] = [];
+
+  const mid: IProject[] = [];
+
+  const lead: IProject[] = [];
+
+  const senior: IProject[] = [];
 
   // Eğer saat türkiye saati ile 9.00-18.00 arasında ise meşgul, 18.00'dan sonra ise müsait, 00.00'dan sonra çevrimdışı gözükmeli
   useEffect(() => {
-    const currentDate = new Date();
-    const utcOffset = currentDate.getTimezoneOffset() * 60 * 1000;
-    const localDate = new Date(currentDate.getTime() - utcOffset);
-    const localHours = localDate.getHours();
+    const startHour = 9;
+    const endHour = 18;
 
-    if (localHours >= 9 && localHours < 18) {
+    const date = new Date();
+    const hour = date.getHours();
+
+    if (hour >= startHour && hour < endHour) {
       setOwnerStatus("busy");
-    } else if (localHours >= 18 && localHours < 24) {
+    } else if (hour >= endHour && hour < 24) {
       setOwnerStatus("available");
     } else {
       setOwnerStatus("offline");
@@ -68,8 +79,11 @@ export default function Home() {
     <div className="home-page">
       <PortfolioOwner owner={owner?.owner} status={ownerStatus} />
       <div className="projects-wrapper">
-        <ProjectCard items={newbies} title="Newbie" variant="primary" />
-        <ProjectCard items={juniors} title="Junior" variant="secondary" />
+        <ProjectCard items={intern} title="Intern" variant="secondary" />
+        <ProjectCard items={junior} title="Junior" variant="success" />
+        <ProjectCard items={mid} title="Mid" variant="info" />
+        <ProjectCard items={lead} title="Lead" variant="warning" />
+        <ProjectCard items={senior} title="Senior" variant="danger" />
       </div>
     </div>
   );

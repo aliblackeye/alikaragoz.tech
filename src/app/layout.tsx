@@ -3,7 +3,7 @@ import Head from "next/head";
 
 // Metadata
 export const metadata = {
-  title: "Ali Karagöz | Projects",
+  title: "Ali Karagöz | Portfolio ",
   description:
     "Bu zamana kadar yapmış olduğum bütün projeleri burada paylaşıyorum.",
 };

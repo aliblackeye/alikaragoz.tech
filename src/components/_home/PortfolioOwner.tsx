@@ -1,5 +1,4 @@
 import {
-  FaGithub,
   FaGithubSquare,
   FaInstagram,
   FaLinkedin,
