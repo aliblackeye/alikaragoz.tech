@@ -56,6 +56,10 @@ export default function Home() {
       name: "Order Summary",
       path: "intern/order-summary",
     },
+    {
+      name: "Stats Preview",
+      path: "intern/stats-preview",
+    },
   ];
 
   const junior: IProject[] = [];
