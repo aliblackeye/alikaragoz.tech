@@ -1,0 +1,75 @@
+.profile-card {
+  width: 350px;
+
+  .top {
+    background-color: #221349;
+    height: 150px;
+  border-radius: 10px 10px 0 0;
+
+  }
+
+  .bottom {
+    background-color: #fff;
+    color: #3b394a;
+    text-align: center;
+    position: relative;
+    border-radius: 0 0 10px 10px;
+    padding-top: 70px;
+    padding-bottom: 30px;
+    .avatar {
+      width: 100px;
+      position: absolute;
+        top: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+      height: 100px;
+      background-color: #fff;
+      padding: 4px;
+      border-radius: 50%;
+      img {
+        border-radius: 50%;
+      }
+    }
+
+    .name {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      .age {
+          color: #818189;
+          font-weight: 400;
+          padding-left: 5px;
+        }
+    }
+    
+    .location {
+        color: #818189;;
+        font-weight: 400;
+    }
+
+    .divider {
+        height: 1px;
+        background-color: #e9e9e9;
+        margin: 30px 0;
+    }
+
+    .stats{
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+        .stat {
+            flex:1;
+            .value {
+                font-weight: 800;
+                font-size: 20px;
+            }
+            .type {
+                font-size: 12px;
+                color: #818189;
+                letter-spacing: 1.5px;
+            }
+        }
+    }
+  }
+}

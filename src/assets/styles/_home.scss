@@ -23,7 +23,7 @@
   .project-list {
     background: linear-gradient(
       180deg,
-      rgba(24, 13, 53, 1) 100%,
+      #221349 100%,
       rgba(0, 0, 0, 1) 100%
     );
     border-radius: 10px;
@@ -42,20 +42,20 @@
   .portfolio-owner {
     display: flex;
     padding: 20px;
-    background: rgb(24, 13, 53);
+    background: #221349;
     background: -moz-linear-gradient(
       180deg,
-      rgba(24, 13, 53, 1) 55%,
+      #221349 55%,
       rgba(0, 0, 0, 1) 55%
     );
     background: -webkit-linear-gradient(
       180deg,
-      rgba(24, 13, 53, 1) 55%,
+      #221349 55%,
       rgba(0, 0, 0, 1) 55%
     );
     background: linear-gradient(
       180deg,
-      rgba(24, 13, 53, 1) 55%,
+      #221349 55%,
       rgba(0, 0, 0, 1) 55%
     );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#180d35",endColorstr="#000000",GradientType=1);

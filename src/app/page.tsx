@@ -64,6 +64,10 @@ export default function Home() {
       name: "3 Column Preview",
       path: "intern/three-column-card",
     },
+    {
+      name: "Profile Card",
+      path: "intern/profile-card",
+    },
   ];
 
   const junior: IProject[] = [];
