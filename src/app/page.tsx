@@ -60,6 +60,10 @@ export default function Home() {
       name: "Stats Preview",
       path: "intern/stats-preview",
     },
+    {
+      name: "3 Column Preview",
+      path: "intern/three-column-card",
+    },
   ];
 
   const junior: IProject[] = [];

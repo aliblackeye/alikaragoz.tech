@@ -1,0 +1,85 @@
+.three-column-card {
+  display: flex;
+  width: 800px;
+  margin-bottom: 10px;
+
+  @media (max-width: 800px) {
+    width: 350px;
+    flex-direction: column;
+    .column:nth-child(1) {
+      border-radius: 10px 10px 0 0 !important;
+    }
+    .column:nth-child(3) {
+      border-radius: 0 0 10px 10px !important;
+    }
+    .column{
+      padding: 30px !important;
+    }
+  }
+
+  .column {
+    padding: 50px;
+
+    h1 {
+      color: #eff3f3;
+      margin: 30px 0;
+    }
+
+    p {
+      margin-bottom: 50px;
+    }
+
+    .circle {
+      background-color: #00000033;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      position: relative;
+      margin-bottom: 30px;
+
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &:nth-last-child(1) {
+      color: #92b9bc;
+      background-color: #00403f;
+      .learn-more-btn {
+        color: #00403f;
+      }
+    }
+
+    &:nth-last-child(2) {
+      color: #8dd3da;
+      background-color: #016972;
+      .learn-more-btn {
+        color: #016972;
+      }
+    }
+
+    &:nth-last-child(3) {
+      color: #fabf8a;
+      background-color: #e28525;
+      .learn-more-btn {
+        color: #e28524;
+      }
+    }
+  }
+
+  .column:nth-child(1) {
+    border-radius: 10px 0 0 10px;
+  }
+  .column:nth-child(3) {
+    border-radius: 0px 10px 10px 0px;
+  }
+  .learn-more-btn {
+    border-radius: 30px;
+    margin-top: 20px;
+    background-color: white;
+    display: inline-block;
+  }
+}
