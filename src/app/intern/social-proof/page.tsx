@@ -63,7 +63,7 @@ export default function SocialProof() {
                   <StarEl />
                   <StarEl />
                 </div>{" "}
-                {rateCard.text}
+                {`${rateCard.text}`}
               </div>
             ))}
           </div>
@@ -83,7 +83,7 @@ export default function SocialProof() {
                 </div>
               </div>
               <div className="card-bottom">
-                <p className="comment">" {card.comment} "</p>
+                <p className="comment">{`" ${card.comment} "`}</p>
               </div>
             </div>
           ))}
