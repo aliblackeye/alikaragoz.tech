@@ -68,6 +68,10 @@ export default function Home() {
       name: "Profile Card",
       path: "intern/profile-card",
     },
+    {
+      name: "FAQ Accordion",
+      path: "intern/faq-accordion",
+    },
   ];
 
   const junior: IProject[] = [];
