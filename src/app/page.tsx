@@ -72,6 +72,10 @@ export default function Home() {
       name: "FAQ Accordion",
       path: "intern/faq-accordion",
     },
+    {
+      name: "Social Proof",
+      path: "intern/social-proof",
+    },
   ];
 
   const junior: IProject[] = [];

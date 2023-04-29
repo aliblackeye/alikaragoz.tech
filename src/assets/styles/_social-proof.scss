@@ -1,0 +1,151 @@
+$primary: #511f50;
+$white: #fff;
+$title: #d478b3;
+$text: #86607f;
+
+.social-proof {
+  background-color: #fff;
+  padding: 50px;
+  width: 1110px;
+
+  color: $primary;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+
+  @media (max-width: 1110px) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .top {
+      flex-direction: column;
+      gap: 30px;
+
+      &-left {
+        text-align: center;
+        flex: unset !important;
+      }
+
+      &-right {
+        flex:unset !important;
+        .rate-cards{
+          .rate-card{
+            width: 100% !important;
+            transform: unset !important;
+          }
+        }
+      }
+
+    }
+    .bottom {
+      
+     &-cards {
+      flex-direction: column;
+     }
+    }
+
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-left {
+      flex: 0.5;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      &-title {
+        font-size: 50px;
+        font-weight: 800;
+      }
+      &-text {
+        color: $text;
+      }
+    }
+
+    &-right {
+      flex: 1;
+
+      .rate-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+
+        .rate-card {
+          background-color: #f7f2f8;
+          border-radius: 10px;
+          padding: 20px;
+          display: flex;
+          align-items: center;
+          position: relative;
+
+          width: 500px;
+          gap: 20px;
+          font-weight: 800;
+          color: $primary;
+
+          &:first-child {
+            transform: translate(0px, 20px);
+          }
+
+          &:nth-child(2) {
+            transform: translate(40px, 20px);
+          }
+
+          &:last-child {
+            transform: translate(80px, 20px);
+          }
+
+          .five-stars {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  .bottom {
+    &-cards {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      .card {
+        background-color: $primary;
+        color: $white;
+        height: 220px;
+        width: 370px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        border-radius: 10px;
+
+        &-top {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+
+          .name {
+            font-weight: 500;
+          }
+          .title {
+            color: $title;
+          }
+        }
+      }
+    }
+  }
+}
