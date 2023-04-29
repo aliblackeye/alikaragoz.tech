@@ -76,6 +76,10 @@ export default function Home() {
       name: "Social Proof",
       path: "intern/social-proof",
     },
+    {
+      name: "Article Preview",
+      path: "intern/article-preview",
+    },
   ];
 
   const junior: IProject[] = [];

@@ -7,7 +7,7 @@ $text: #86607f;
   background-color: #fff;
   padding: 50px;
   width: 1110px;
-
+border-radius: 10px;
   color: $primary;
   display: flex;
   flex-direction: column;
@@ -20,7 +20,8 @@ $text: #86607f;
     align-items: center;
     .top {
       flex-direction: column;
-      gap: 30px;
+      gap: 60px;
+      width: 100%;
 
       &-left {
         text-align: center;
@@ -29,10 +30,17 @@ $text: #86607f;
 
       &-right {
         flex:unset !important;
+        width: 370px;
+        @media (max-width:500px) {
+        width: 100%;
+          
+        }
         .rate-cards{
+          width: 100%;
           .rate-card{
             width: 100% !important;
             transform: unset !important;
+            flex-direction: column;
           }
         }
       }
