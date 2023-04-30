@@ -4,7 +4,6 @@ import Image from "next/image";
 import { FaGithub, FaInstagram, FaLinkedin, FaShare } from "react-icons/fa";
 
 import img from "@/assets/images/article.jpg";
-import { useState } from "react";
 export default function ArticlePreview() {
   return (
     <div className="article-preview">

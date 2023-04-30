@@ -15,6 +15,7 @@
 @import "./social-proof";
 @import "./article-preview";
 @import "./four-card";
+@import "./base-apparel";
 
 * {
   margin: 0;
@@ -37,6 +38,13 @@ body {
 li {
   list-style: none;
   width: 100%;
+}
+
+input {
+  border: none;
+  outline: none;
+  width: 100%;
+  background-color: transparent;
 }
 
 img {

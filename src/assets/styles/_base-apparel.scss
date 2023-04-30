@@ -1,0 +1,108 @@
+.base-apparel {
+  background-image: linear-gradient(#fff6f5 100%, #fefafb 100%);
+  width: 800px;
+  display: flex;
+  .left {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px;
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      .circle {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        background-color: transparent;
+        border: 4px solid #e0b0b0;
+        align-items: center;
+        justify-content: center;
+      }
+      .brand-name {
+        color: #443b3a;
+        font-size: 14px;
+        max-width: 70px;
+        width: 100%;
+        font-weight: 800;
+        letter-spacing: 3px;
+        line-height: 1;
+      }
+    }
+
+    .bottom {
+      .title {
+        font-size: 50px;
+        font-weight: 300;
+        letter-spacing: 10px;
+        color: #443b3a;
+      }
+
+      .title.colored {
+        color: #c3a5a5;
+      }
+
+      .text {
+        font-size: 14px;
+        color: #d2bdbf;
+        margin: 20px 0;
+        font-weight: 500;
+      }
+
+      .subscribe-input {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid #d2bdbf;
+        border-radius: 30px;
+        padding: 10px 20px;
+        position: relative;
+        input {
+          font-size: 14px;
+          font-weight: 500;
+          color: #d2bdbf;
+          &::placeholder {
+            color: #d2bdbf;
+          }
+        }
+        button {
+          background-image: linear-gradient(90deg, #f6b6b6 20%, #f0918e 100%);
+          background-size: 200% 200%;
+          transition: background-position 0.5s ease;
+          color: #fff;
+          border: none;
+          outline: none;
+          padding: 14px 30px;
+          border-radius: 30px;
+          font-size: 18px;
+          font-weight: 500;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          right: 0;
+          &:hover {
+            background-position: right center;
+          }
+        }
+      }
+    }
+  }
+
+  .right {
+    width: 40%;
+    .model {
+      width: 100%;
+      height: 100%;
+      img {
+        object-fit: contain;
+      }
+    }
+  }
+}
