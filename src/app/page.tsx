@@ -88,6 +88,11 @@ export default function Home() {
       name: "Base Apparel",
       path: "intern/base-apparel",
     },
+
+    {
+      name: "Sign Up Form",
+      path: "intern/sign-up-form",
+    },
   ];
 
   const junior: IProject[] = [];

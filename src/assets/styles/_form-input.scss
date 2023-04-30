@@ -1,0 +1,29 @@
+.input-group {
+  .input-element {
+    border: 2px solid #eeeeee;
+    border-radius: 4px;
+    &:focus-within {
+      border: 2px solid #c0bfc8;
+    }
+
+    input {
+      padding: 10px 20px;
+    }
+    &.invalid {
+      border-color: #ff7978;
+    }
+
+    &.invalid ~ .error-message {
+      visibility: visible;
+    }
+  }
+
+  .error-message {
+    color: #ff7978;
+    font-size: 11px;
+    visibility: hidden;
+    white-space: nowrap;
+    width: 100%;
+
+  }
+}
