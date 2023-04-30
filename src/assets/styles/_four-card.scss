@@ -1,0 +1,119 @@
+.four-card {
+  background-color: #fafafa;
+  padding: 80px;
+  color: hsl(231, 13%, 30%);
+  border-radius: 10px;
+  .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .title {
+      font-size: 36px;
+      font-weight: 700;
+      text-align: center;
+
+      &.light {
+        font-weight: 300;
+        color: #747476;
+      }
+    }
+
+    .text {
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.5;
+      text-align: center;
+      max-width: 450px;
+      margin-bottom: 40px;
+      margin-top: 10px;
+      width: 100%;
+      display: flex;
+      color: rgb(172, 172, 172);
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .cards {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    gap: 30px;
+
+    .left {
+      display: flex;
+    }
+    .middle {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    .right {
+      display: flex;
+    }
+    .card {
+      width: 350px;
+      background-color: #fff;
+      border-top: 3.5px solid;
+      padding: 30px;
+      box-shadow: 0 4px 20px 0px rgba($color: #000000, $alpha: 0.15);
+      border-radius: 10px;
+      transition: all 0.5s ease;
+
+      &:hover {
+        transform: translateY(-10px);
+      }
+      h6 {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.5;
+        color: rgb(172, 172, 172);
+      }
+
+      &-footer {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .icon {
+          width: 50px;
+          height: 50px;
+        }
+      }
+
+      &.red {
+        border-top-color: #b14e50;
+      }
+
+      &.blue {
+        border-top-color: #4db6b6;
+      }
+
+      &.dark-blue {
+        border-top-color: #4383bf;
+      }
+
+      &.yellow {
+        border-top-color: #f5a82e;
+      }
+    }
+  }
+
+  @media (max-width: 1170px) {
+    .cards {
+      flex-direction: column;
+    }
+
+    .title {
+      font-size: 30px !important;
+    }
+  }
+}

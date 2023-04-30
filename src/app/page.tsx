@@ -80,6 +80,10 @@ export default function Home() {
       name: "Article Preview",
       path: "intern/article-preview",
     },
+    {
+      name: "Four Cards",
+      path: "intern/four-cards",
+    },
   ];
 
   const junior: IProject[] = [];

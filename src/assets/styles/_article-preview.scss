@@ -116,6 +116,10 @@
 
             svg {
               cursor: pointer;
+              transition: all 0.4s ease;
+              &:hover {
+                color: #100922;
+              }
             }
           }
           .triangle {
