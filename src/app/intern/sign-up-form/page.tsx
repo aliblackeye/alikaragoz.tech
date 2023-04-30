@@ -1,6 +1,7 @@
 "use client";
 import FormInput from "@/components/form-elements/FormInput";
 import Toast from "@/components/miscs/toast/Toast";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 interface FormValues {
@@ -8,6 +9,8 @@ interface FormValues {
 }
 
 export default function SignUpForm() {
+  const router = useRouter();
+
   const [values, setValues] = useState<FormValues>({
     firstName: "",
     lastName: "",
@@ -27,6 +30,11 @@ export default function SignUpForm() {
     // eğer datanın tüm gerekli alanları dolu ise toast gözüksün
     if (Object.keys(data).length === inputs.length) {
       setSubmitted(true);
+      // kullanıcıyı anasayfaya yönlendirme kodu
+      setTimeout(() => {
+        
+        router.push("/");
+      }, 1000);
     }
   };
 
