@@ -101,6 +101,10 @@ export default function Home() {
       name: "Ping Single Column",
       path: "intern/ping-single-column",
     },
+    {
+      name: "Huddle Landing",
+      path: "intern/huddle-landing",
+    },
   ];
 
   const junior: IProject[] = [];

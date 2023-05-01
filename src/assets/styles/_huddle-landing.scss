@@ -1,0 +1,113 @@
+.huddle-landing {
+  background-color: #674bb0;
+  width: 1100px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  justify-content: center;
+  position: relative;
+
+  @media (max-width: 1100px) {
+    width: 600px;
+    &-content {
+      .middle {
+        flex-direction: column;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    width: 350px;
+
+    .middle {
+      flex-direction: column;
+      text-align: center;
+
+      img {
+        width: 300px !important;
+      }
+
+      .title {
+        font-size: 24px !important;
+        font-weight: 500;
+      }
+
+      .register-btn {
+        width: 50% !important;
+        margin-bottom: 20px !important;
+        margin: 0  auto ;
+      }
+    }
+  }
+
+  &-content {
+    position: relative;
+    z-index: 2;
+    .top {
+      img {
+        width: 140px;
+      }
+    }
+
+    .middle {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      img {
+        width: 500px;
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .register-btn {
+          border-radius: 50px;
+          color: #674bb0;
+          width: 160px;
+          box-shadow: 0px 4px 10px rgba($color: #000000, $alpha: 0.3);
+
+          &:hover {
+            background-color: #8e6ede;
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    .bottom {
+      display: flex;
+      justify-content: flex-end;
+      .socials {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .social {
+          border-radius: 50%;
+          width: 30px;
+          &:hover {
+            background-color: #8e6ede;
+            color: #fff;
+            transform: rotateZ(360deg);
+          }
+          height: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          border: 1px solid #f2f2f2;
+          transition: transform 0.5s ease-in-out;
+        }
+      }
+    }
+  }
+
+  .desktop-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+  }
+}
