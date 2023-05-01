@@ -1,0 +1,148 @@
+.single-price-grid {
+  background-color: #fff;
+  width: 600px;
+  border-radius: 10px;
+  &__top {
+    padding: 30px;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  &__top-title {
+    color: #54b2ad;
+    margin-bottom: 10px;
+  }
+
+  &__top-subtitle {
+    color: #bfe031;
+    font-weight: 600;
+    line-height: 1.5;
+
+    &:last-child {
+      color: #b8b8c3;
+      font-weight: 300;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    height: 50%;
+    &-left {
+      background-color: #2bb4b1;
+      padding: 30px;
+      width: 50%;
+      border-bottom-left-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      &__title {
+        font-size: 14px;
+        color: #fff;
+        margin-bottom: 10px;
+      }
+
+      &__price {
+        display: flex;
+        &-dollar {
+          font-size: 32px;
+          color: #fff;
+          margin-right: 5px;
+        }
+
+        &-perMonth {
+          font-size: 14px;
+          color: #93e6ec;
+          align-self: center;
+        }
+
+        &-subtitle {
+          font-size: 14px;
+          color: #fff;
+          margin-bottom: 10px;
+        }
+      }
+
+      &__button {
+        background-color: #bfe031;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-weight: 500;
+        font-size: 14px;
+        width: 100%;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        margin-top: auto;
+        box-shadow: 0px 4px 10px rgba($color: #000000, $alpha: 0.2);
+
+        &:hover {
+          background-color: #fff;
+          color: #49bebd;
+        }
+      }
+    }
+
+    &-right {
+      padding: 30px;
+      background-color: #49bebd;
+      width: 50%;
+      border-bottom-right-radius: 10px;
+      &-title {
+        font-size: 16px;
+      }
+
+      &-list {
+        margin-top: 10px;
+        font-size: 12px;
+        line-height: 1.5;
+        color: #93e6ec;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    width: 300px;
+    height: 100% !important;
+
+    &__top {
+      width: 100%;
+      height: 200px;
+      padding: 20px;
+    }
+
+    &__top-title {
+      color: #54b2ad;
+      margin-bottom: 10px;
+    }
+    &__top-subtitle {
+      color: #bfe031;
+      font-weight: 600;
+      line-height: 1.5;
+      font-size: 14px;
+
+      &:last-child {
+        color: #b8b8c3;
+        font-weight: 300;
+        margin-top: 10px;
+      }
+    }
+
+    &__bottom {
+      flex-direction: column;
+      &-left,
+      &-right {
+        width: 100%;
+        border-radius: 0;
+        height: 200px;
+        padding: 20px;
+      }
+
+      &-right {
+        border-radius: 0 0 10px 10px;
+      }
+    }
+  }
+}

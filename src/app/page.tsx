@@ -93,6 +93,10 @@ export default function Home() {
       name: "Sign Up Form",
       path: "intern/sign-up-form",
     },
+    {
+      name: "Single Price Grid",
+      path: "intern/single-price-grid",
+    },
   ];
 
   const junior: IProject[] = [];
