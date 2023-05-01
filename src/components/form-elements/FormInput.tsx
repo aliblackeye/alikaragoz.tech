@@ -14,6 +14,20 @@ interface IFormInput {
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
+
+export interface FormValues {
+  [key: string]: string;
+}
+
+export type Inputs = {
+  name: string;
+  type?: string;
+  placeholder?: string;
+  errorMessage?: string;
+  required?: boolean;
+  pattern?: string;
+}[];
+
 export default function FormInput(props: IFormInput) {
   const {
     name,

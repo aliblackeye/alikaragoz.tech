@@ -1,12 +1,11 @@
 "use client";
-import FormInput from "@/components/form-elements/FormInput";
+import FormInput, {
+  FormValues,
+  Inputs,
+} from "@/components/form-elements/FormInput";
 import Toast from "@/components/miscs/toast/Toast";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-
-interface FormValues {
-  [key: string]: string;
-}
 
 export default function SignUpForm() {
   const router = useRouter();
@@ -32,7 +31,6 @@ export default function SignUpForm() {
       setSubmitted(true);
       // kullanıcıyı anasayfaya yönlendirme kodu
       setTimeout(() => {
-        
         router.push("/");
       }, 1000);
     }
@@ -41,15 +39,6 @@ export default function SignUpForm() {
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValues({ ...values, [e.currentTarget.name]: e.currentTarget.value });
   };
-
-  type Inputs = {
-    name: string;
-    type?: string;
-    placeholder?: string;
-    errorMessage?: string;
-    required?: boolean;
-    pattern?: string;
-  }[];
 
   // Patterns
   // Şifre en az 1 büyük harf, 1 küçük harf ve 1 rakam içermelidir ve en az 8 karakter olmalıdır.

@@ -1,0 +1,58 @@
+.ping-single-column {
+  text-align: center;
+  background-color: #fff;
+  color: #1f2a35;
+  padding: 40px;
+  border-radius: 5px;
+  .brand {
+    font-size: 30px;
+    .square {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background-color: #437eff;
+      margin-right: 10px;
+      border-radius: 1px;
+    }
+  }
+
+  .title {
+    font-size: 50px;
+    margin-top: 20px;
+    font-weight: 100;
+    color: #949494;
+
+    .bold {
+      font-weight: 700;
+      color: #1f2a35;
+    }
+  }
+
+  .description {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+
+  .input-element {
+    border-radius: 30px;
+    input {
+        padding: 15px 30px;
+    }
+
+  }
+
+
+
+  .subscribe-button {
+    color: #fff;
+    background-color: #437eff;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background-color: #3b6eff;
+    }
+  }
+}

@@ -97,6 +97,10 @@ export default function Home() {
       name: "Single Price Grid",
       path: "intern/single-price-grid",
     },
+    {
+      name: "Ping Single Column",
+      path: "intern/ping-single-column",
+    },
   ];
 
   const junior: IProject[] = [];
