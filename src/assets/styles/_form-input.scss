@@ -1,4 +1,16 @@
 .input-group {
+
+  color: #666;
+
+  .input-label{
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+
+  }
+
   .input-element {
     border: 2px solid #eeeeee;
     border-radius: 4px;

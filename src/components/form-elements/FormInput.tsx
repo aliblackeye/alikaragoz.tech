@@ -1,10 +1,18 @@
 "use client";
 import { useState } from "react";
 
-interface IFormInput {
+export interface IFormInput {
   label?: string;
   name: string;
-  type?: string;
+  type?:
+    | "number"
+    | "text"
+    | "email"
+    | "password"
+    | "date"
+    | "time"
+    | "tel"
+    | "url";
   placeholder?: string;
   required?: boolean;
   value?: string;
@@ -12,21 +20,12 @@ interface IFormInput {
   errorMessage?: string;
   autoComplete?: "off" | "on";
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  showError?: boolean;
 }
-
 
 export interface FormValues {
   [key: string]: string;
 }
-
-export type Inputs = {
-  name: string;
-  type?: string;
-  placeholder?: string;
-  errorMessage?: string;
-  required?: boolean;
-  pattern?: string;
-}[];
 
 export default function FormInput(props: IFormInput) {
   const {
@@ -40,38 +39,60 @@ export default function FormInput(props: IFormInput) {
     pattern,
     errorMessage = "Please enter a valid value!",
     autoComplete = "off",
+    showError = false,
   } = props;
   const [focused, setFocused] = useState(false);
+  const [inputValue, setInputValue] = useState<string>(value || "");
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newValue = e.target.value;
+    setInputValue(newValue);
+    if (pattern && !RegExp(pattern).test(newValue)) {
+      setFocused(true);
+    } else {
+      setFocused(false);
+    }
+    if (onChange) {
+      onChange(e);
+    }
+  };
 
   return (
     <div className="input-group">
+      {label && (
+        <label className="input-label" htmlFor={name}>
+          {label}
+        </label>
+      )}
+
       <div
         className={[
           "input-element",
-          focused && pattern && !RegExp(pattern).test(value || "")
+          focused && pattern && !RegExp(pattern).test(inputValue || "")
             ? "invalid"
             : "",
         ].join(" ")}
       >
-        {label && <label htmlFor={name}>{label}</label>}
         <input
           type={type}
           id={name}
           name={name}
           placeholder={placeholder}
           required={required}
-          value={value}
-          onChange={onChange}
+          value={inputValue}
+          onChange={handleInputChange}
           pattern={pattern}
           autoComplete={autoComplete}
-          onBlur={() => {
-            if (pattern && !RegExp(pattern).test(value || "")) {
-              setFocused(true);
-            }
-          }}
         />
       </div>
-      <div className="error-message">{errorMessage}</div>
+
+      {showError ? (
+        <div className="error-message">{errorMessage}</div>
+      ) : focused && pattern && !RegExp(pattern).test(inputValue || "") ? (
+        <div className="error-message">{errorMessage}</div>
+      ) : (
+        ""
+      )}
     </div>
   );
 }

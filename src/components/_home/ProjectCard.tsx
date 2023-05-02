@@ -4,7 +4,14 @@ interface IProjectCard {
     name: string;
     path: string;
   }[];
-  variant: "primary" | "success" | "danger" | "info" | "secondary" | "warning";
+  variant:
+    | "primary"
+    | "success"
+    | "danger"
+    | "info"
+    | "secondary"
+    | "warning"
+    | "purple";
 }
 
 export default function ProjectCard(props: IProjectCard) {

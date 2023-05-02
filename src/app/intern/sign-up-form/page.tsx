@@ -1,7 +1,7 @@
 "use client";
 import FormInput, {
   FormValues,
-  Inputs,
+  IFormInput,
 } from "@/components/form-elements/FormInput";
 import Toast from "@/components/miscs/toast/Toast";
 import { useRouter } from "next/navigation";
@@ -49,7 +49,7 @@ export default function SignUpForm() {
     password: "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,50}$",
   };
 
-  const inputs: Inputs = [
+  const inputs: IFormInput[] = [
     {
       name: "firstName",
       placeholder: "First Name",
