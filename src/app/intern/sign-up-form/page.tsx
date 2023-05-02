@@ -84,7 +84,8 @@ export default function SignUpForm() {
   ];
 
   return (
-    <form className="sign-up-form" onSubmit={handleSubmit}>
+   <div className="centered-page">
+     <form className="sign-up-form" onSubmit={handleSubmit}>
       <div className="left">
         <h1>Learn to code by watching others</h1>
         <p>
@@ -125,5 +126,6 @@ export default function SignUpForm() {
         />
       )}
     </form>
+   </div>
   );
 }

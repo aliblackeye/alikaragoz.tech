@@ -40,7 +40,8 @@ export default function SocialProof() {
   ];
 
   return (
-    <section className="social-proof">
+    <div className="centered-page">
+      <section className="social-proof">
       <div className="top">
         <div className="top-left">
           <h1 className="top-left-title">
@@ -90,5 +91,6 @@ export default function SocialProof() {
         </div>
       </div>
     </section>
+    </div>
   );
 }

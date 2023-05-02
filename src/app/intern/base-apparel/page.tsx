@@ -3,7 +3,8 @@ import img from "@/assets/images/model.jpeg";
 import { BiChevronRight } from "react-icons/bi";
 export default function BaseApparel() {
   return (
-    <div className="base-apparel">
+    <div className="centered-page">
+      <div className="base-apparel">
       <div className="left">
         <div className="brand">
           <div className="circle"></div>
@@ -26,6 +27,7 @@ export default function BaseApparel() {
           <Image src={img} alt="model" />
         </div>
       </div>
+    </div>
     </div>
   );
 }

@@ -4,7 +4,8 @@ import img from "@/assets/images/stats.png";
 
 export default function StatsPreview() {
   return (
-    <div className="stats-preview">
+    <div className="centered-page">
+      <div className="stats-preview">
       <div className="stats-preview__left">
         <h1 className="title">
           Get <span className="purple">insights</span> that help your business
@@ -33,6 +34,7 @@ export default function StatsPreview() {
       <div className="stats-preview__right">
         <Image src={img} alt="stats" />
       </div>
+    </div>
     </div>
   );
 }

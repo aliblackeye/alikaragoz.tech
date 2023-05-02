@@ -14,7 +14,7 @@ export default function InteractiveRating() {
   const [rating, setRating] = useState<Rating>(0);
 
   return (
-    <>
+    <div className="centered-page">
       {rating ? (
         <div className="interactive-rating rated">
           <div className="rating-image">
@@ -29,6 +29,6 @@ export default function InteractiveRating() {
       ) : (
         <RatingForm setRating={setRating} />
       )}
-    </>
+    </div>
   );
 }

@@ -21,11 +21,7 @@
   }
 
   .project-list {
-    background: linear-gradient(
-      180deg,
-      #221349 100%,
-      rgba(0, 0, 0, 1) 100%
-    );
+    background: linear-gradient(180deg, #221349 100%, rgba(0, 0, 0, 1) 100%);
     border-radius: 10px;
     padding: 20px;
     width: 250px;
@@ -43,21 +39,13 @@
     display: flex;
     padding: 20px;
     background: #221349;
-    background: -moz-linear-gradient(
-      180deg,
-      #221349 55%,
-      rgba(0, 0, 0, 1) 55%
-    );
+    background: -moz-linear-gradient(180deg, #221349 55%, rgba(0, 0, 0, 1) 55%);
     background: -webkit-linear-gradient(
       180deg,
       #221349 55%,
       rgba(0, 0, 0, 1) 55%
     );
-    background: linear-gradient(
-      180deg,
-      #221349 55%,
-      rgba(0, 0, 0, 1) 55%
-    );
+    background: linear-gradient(180deg, #221349 55%, rgba(0, 0, 0, 1) 55%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#180d35",endColorstr="#000000",GradientType=1);
     border-radius: 10px;
     margin-bottom: 20px;

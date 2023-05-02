@@ -8,7 +8,8 @@ import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 export default function HuddleLanding() {
   return (
-    <div className="huddle-landing">
+    <div className="centered-page">
+      <div className="huddle-landing">
       <div className="huddle-landing-content">
         <div className="top">
           <Image src={logo} alt="logo" />
@@ -42,6 +43,7 @@ export default function HuddleLanding() {
         </div>
       </div>
       <Image src={bgDesktop} alt="logo" className="desktop-bg" />
+    </div>
     </div>
   );
 }

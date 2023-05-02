@@ -28,7 +28,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header>
+    <header className="app-header">
       {!isHome && (
         <a href={"/"}>
           <button className="go-home-btn">

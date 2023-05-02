@@ -5,7 +5,8 @@ import img from "@/assets/images/musician.png";
 
 export default function OrderSummary() {
   return (
-    <div className="order-summary">
+    <div className="centered-page">
+      <div className="order-summary">
       <div className="order-summary__top">
         <Image src={img} alt="order" />
       </div>
@@ -36,6 +37,7 @@ export default function OrderSummary() {
           Cancel Order
         </a>
       </div>
+    </div>
     </div>
   );
 }

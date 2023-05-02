@@ -9,7 +9,8 @@ const metadata: Metadata = {
 
 export default function NftCard() {
   return (
-    <div className="nft-card">
+    <div className="centered-page">
+      <div className="nft-card">
       <div className="nft-card__top">
         <div className="nft-image">
           <img
@@ -47,6 +48,7 @@ export default function NftCard() {
           </span>
         </div>
       </div>
+    </div>
     </div>
   );
 }

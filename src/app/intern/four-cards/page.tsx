@@ -7,7 +7,8 @@ import calculator from "@/assets/images/calculator.png";
 
 export default function FourCards() {
   return (
-    <div className="four-card">
+    <div className="centered-page">
+      <div className="four-card">
      <div className="top">
      <h1 className="title light">Reliable, efficient delivery</h1>
       <h1 className="title">Powered by Technology </h1>
@@ -60,6 +61,7 @@ export default function FourCards() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

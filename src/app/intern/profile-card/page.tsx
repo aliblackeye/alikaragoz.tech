@@ -2,7 +2,8 @@ import React from "react";
 
 export default function ProfileCard() {
   return (
-    <div className="profile-card">
+    <div className="centered-page">
+      <div className="profile-card">
       <div className="top"></div>
       <div className="bottom">
         <div className="avatar">
@@ -31,6 +32,7 @@ export default function ProfileCard() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

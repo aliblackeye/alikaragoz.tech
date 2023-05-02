@@ -108,8 +108,12 @@ export default function Home() {
   ];
 
   const junior: IProject[] = [
-    { name: "Oceanland Clone", path: "https://aliblackeye-oceanland-clone.netlify.app/" },
+    {
+      name: "Oceanland Clone",
+      path: "https://aliblackeye-oceanland-clone.netlify.app/",
+    },
     { name: "Age Calculator", path: "junior/age-calculator" },
+    { name: "News Page", path: "junior/news-page" },
   ];
 
   const mid: IProject[] = [];
@@ -137,13 +141,15 @@ export default function Home() {
 
   return (
     <div className="home-page">
-      <PortfolioOwner owner={owner?.owner} status={ownerStatus} />
-      <div className="projects-wrapper">
-        <ProjectCard items={intern} title="Intern" variant="purple" />
-        <ProjectCard items={junior} title="Junior" variant="success" />
-        <ProjectCard items={mid} title="Mid" variant="info" />
-        <ProjectCard items={lead} title="Lead" variant="warning" />
-        <ProjectCard items={senior} title="Senior" variant="danger" />
+      <div className="centered-page">
+        <PortfolioOwner owner={owner?.owner} status={ownerStatus} />
+        <div className="projects-wrapper">
+          <ProjectCard items={intern} title="Intern" variant="purple" />
+          <ProjectCard items={junior} title="Junior" variant="success" />
+          <ProjectCard items={mid} title="Mid" variant="info" />
+          <ProjectCard items={lead} title="Lead" variant="warning" />
+          <ProjectCard items={senior} title="Senior" variant="danger" />
+        </div>
       </div>
     </div>
   );

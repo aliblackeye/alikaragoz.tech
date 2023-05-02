@@ -33,7 +33,8 @@ export default function PingSingleColumn() {
   };
 
   return (
-    <div className="ping-single-column">
+    <div className="centered-page">
+      <div className="ping-single-column">
       <h3 className="brand">
         PING
         <div className="square"></div>
@@ -61,6 +62,7 @@ export default function PingSingleColumn() {
           show={submitted}
         />
       )}
+    </div>
     </div>
   );
 }

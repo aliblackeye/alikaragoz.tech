@@ -3,7 +3,7 @@ import { BiBrain ,BiComment} from "react-icons/bi";
 
 export default function ResultsSummary() {
   return (
-    <div>
+    <div className="centered-page">
       <div className="results-summary">
         <div className="left">
           <h4>Your Result</h4>

@@ -1,6 +1,7 @@
 export default function ProductPreviewCard() {
   return (
-    <div className="product-preview-card">
+    <div className="centered-page">
+      <div className="product-preview-card">
       <div className="product-preview-card__left">
         <div className="product-img">
           <img
@@ -27,6 +28,7 @@ export default function ProductPreviewCard() {
           <span className="add-to-cart__text">Add to Cart</span>
         </button>
       </div>
+    </div>
     </div>
   );
 }

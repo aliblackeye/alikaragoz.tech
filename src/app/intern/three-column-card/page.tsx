@@ -4,7 +4,8 @@ import { IoCarSportOutline } from "react-icons/io5";
 
 export default function ThreeColumnCard() {
   return (
-    <div className="three-column-card">
+    <div className="centered-page">
+      <div className="three-column-card">
       <div className="column">
         <div className="circle">
           <BsFillCarFrontFill size={24} color="#fdd574" />
@@ -45,6 +46,7 @@ in Style.`}
         </p>
         <button className="btn learn-more-btn">Learn More</button>
       </div>
+    </div>
     </div>
   );
 }

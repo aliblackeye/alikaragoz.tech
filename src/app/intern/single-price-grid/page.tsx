@@ -1,6 +1,7 @@
 export default function SinglePriceGrid() {
   return (
-    <div className="single-price-grid">
+    <div className="centered-page">
+      <div className="single-price-grid">
       <div className="single-price-grid__top">
         <h3 className="single-price-grid__top-title">Join our community</h3>
         <p className="single-price-grid__top-subtitle">
@@ -48,6 +49,7 @@ export default function SinglePriceGrid() {
           </ul>
         </div>
       </div>
+    </div>
     </div>
   );
 }

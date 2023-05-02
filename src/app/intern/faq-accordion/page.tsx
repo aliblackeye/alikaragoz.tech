@@ -51,7 +51,8 @@ export default function FaqAccordion() {
   };
 
   return (
-    <div className="faq-accordion">
+    <div className="centered-page">
+      <div className="faq-accordion">
       <div className="left">
         <div className="faq-img">
           <Image src={img} alt="faq" />
@@ -82,6 +83,7 @@ export default function FaqAccordion() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

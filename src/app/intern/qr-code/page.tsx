@@ -5,7 +5,8 @@ import img from "@/assets/images/qrcode.png";
 
 export default function QrCode() {
   return (
-    <div className="qr-menu">
+   <div className="centered-page">
+     <div className="qr-menu">
       <div className="qr-img">
         <Image src={img} alt="qr" />
       </div>
@@ -19,5 +20,6 @@ export default function QrCode() {
         </p>
       </div>
     </div>
+   </div>
   );
 }
