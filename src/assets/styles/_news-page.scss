@@ -1,7 +1,210 @@
-.news-page{
-    
-    .navbar{
-        display: flex;
-        gap: 20px;
+.news-page {
+  background-color: #fefdf9;
+  color: #02021b;
+  padding: 10% 0;
+
+  .hamburger-menu-btn {
+    display: none;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 24px;
+    position: relative;
+    z-index: 50;
+
+
+    @media (max-width: 500px) {
+      display: block;
     }
+  }
+  @media (max-width: 800px) {
+    padding: 0%;
+  }
+
+  &-container {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .header {
+    &-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .navbar {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        &.show-hamburger-menu {
+          display: flex;
+        }
+
+        @media (max-width: 500px) {
+          flex-direction: column;
+          gap: 0px;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100vh;
+          background-color: #fff;
+          display: none;
+          align-items: unset;
+          &::before {
+            content: "Discover";
+            top: 0;
+            left: 0;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+            font-weight: 500;
+            font-size: 30px;
+          }
+
+          a {
+            font-size: 24px;
+            padding: 10px;
+            line-height: 1;
+            border-bottom: 2px solid #d0d0d0;
+          }
+        }
+      }
+    }
+  }
+
+  .news-main {
+    &-container {
+      display: flex;
+      gap: 20px;
+
+      @media (max-width: 830px) {
+        flex-direction: column;
+      }
+    }
+    &-left {
+      flex: 9;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      @media (max-width: 830px) {
+        flex: auto;
+      }
+      &-top {
+        width: 100%;
+        height: 300px;
+      }
+      &-bottom {
+        display: flex;
+
+        @media (max-width: 830px) {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        h1 {
+          font-size: 54px;
+          font-weight: 800;
+          color: #00001c;
+          flex: 6;
+          line-height: 1;
+          @media (max-width: 830px) {
+            font-size: 34px;
+            flex: auto;
+          }
+        }
+        .main-info {
+          flex: 6;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          p {
+            font-size: 16px;
+            font-weight: 400;
+            color: #727489;
+          }
+
+          .btn {
+            background-color: #f15d51;
+            border-radius: 0;
+            letter-spacing: 3px;
+            width: 200px;
+          }
+        }
+      }
+    }
+    &-right {
+      flex: 3;
+      .last-news {
+        h1 {
+          padding: 20px 20px 0px 20px;
+          color: #ebae56;
+        }
+        background-color: #00001a;
+        display: flex;
+        flex-direction: column;
+
+        &-item {
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+
+          &-title {
+            color: #fff;
+            font-size: 16px;
+          }
+          p {
+            color: #727489;
+            font-size: 12px;
+          }
+          border-bottom: 1px solid #727489;
+        }
+      }
+    }
+  }
+
+  .news-list {
+    &-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      @media (max-width: 800px) {
+        flex-direction: column;
+      }
+    }
+
+    .news-item {
+      display: flex;
+      gap: 20px;
+      flex: 1;
+
+      &-left {
+        width: 100px;
+      }
+
+      &-right {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        .news-number {
+          color: #c9c6cc;
+          font-size: 36px;
+          font-weight: 600;
+        }
+
+        h4 {
+          font-size: 18px;
+        }
+        p {
+          color: #7c7982;
+          font-weight: 400;
+        }
+      }
+    }
+  }
 }
