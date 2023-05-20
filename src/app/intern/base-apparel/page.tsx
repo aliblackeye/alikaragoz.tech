@@ -1,5 +1,5 @@
 import Image from "next/image";
-import img from "@/assets/images/model.jpeg";
+import img from "@images/model.jpeg";
 import { BiChevronRight } from "react-icons/bi";
 export default function BaseApparel() {
   return (
