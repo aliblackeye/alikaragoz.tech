@@ -1,6 +1,6 @@
 "use client";
 
-import img from "@/assets/images/faq.gif";
+import img from "@assets/images/faq.gif";
 import Image from "next/image";
 
 import { IoIosArrowUp } from "react-icons/io";

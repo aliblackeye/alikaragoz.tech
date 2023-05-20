@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 
-import bgDesktop from "@/assets/images/huddle-bg-desktop.svg";
-import mockups from "@/assets/images/huddle-illustration-mockups.svg";
-import logo from "@/assets/images/huddle-logo.svg";
+import bgDesktop from "@assets/images/huddle-bg-desktop.svg";
+import mockups from "@assets/images/huddle-illustration-mockups.svg";
+import logo from "@assets/images/huddle-logo.svg";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 export default function HuddleLanding() {

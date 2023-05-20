@@ -1,7 +1,7 @@
 // Import Next
 import Image from "next/image";
 
-import img from "@/assets/images/qrcode.png";
+import img from "@assets/images/qrcode.png";
 
 export default function QrCode() {
   return (

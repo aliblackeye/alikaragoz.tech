@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { BsMusicNoteBeamed } from "react-icons/bs";
 
-import img from "@/assets/images/musician.png";
+import img from "@assets/images/musician.png";
 
 export default function OrderSummary() {
   return (

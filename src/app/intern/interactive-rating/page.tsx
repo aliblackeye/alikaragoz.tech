@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import img from "@/assets/images/3drating.png";
+import img from "@assets/images/3drating.png";
 
 // Import Components
 import RatingForm from "@/components/_interactive-rating/RatingForm";

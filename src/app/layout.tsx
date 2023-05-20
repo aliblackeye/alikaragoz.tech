@@ -13,7 +13,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 // Import Styles
-import "@/assets/styles/base.scss";
+import "@assets/styles/base.scss";
 
 export default function RootLayout({
   children,

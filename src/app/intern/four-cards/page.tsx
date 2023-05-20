@@ -1,9 +1,9 @@
 import Image from "next/image";
 
-import detective from "@/assets/images/detective.png";
-import lightbulb from "@/assets/images/lightbulb.png";
-import team from "@/assets/images/team.png";
-import calculator from "@/assets/images/calculator.png";
+import detective from "@assets/images/detective.png";
+import lightbulb from "@assets/images/lightbulb.png";
+import team from "@assets/images/team.png";
+import calculator from "@assets/images/calculator.png";
 
 export default function FourCards() {
   return (

@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import img from "@/assets/images/stats.png";
+import img from "@assets/images/stats.png";
 
 export default function StatsPreview() {
   return (
