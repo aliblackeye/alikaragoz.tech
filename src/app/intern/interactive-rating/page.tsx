@@ -5,8 +5,7 @@ import { useState } from "react";
 import img from "@assets/images/3drating.png";
 
 // Import Components
-import RatingForm from "@/components/_interactive-rating/RatingForm";
-import Image from "next/image";
+import RatingForm from "./_partials/RatingForm";
 
 export type Rating = 0 | 1 | 2 | 3 | 4 | 5;
 
@@ -18,7 +17,10 @@ export default function InteractiveRating() {
       {rating ? (
         <div className="interactive-rating rated">
           <div className="rating-image">
-            <Image src={img} alt="phone-and-credit-illustrate" />
+            <img
+              src={img}
+              alt="phone-and-credit-illustrate"
+            />
           </div>
           <p className="selected-rating">{`You selected ${rating} out of 5`}</p>
           <h1 className="selected-rating-title">Thank you!</h1>

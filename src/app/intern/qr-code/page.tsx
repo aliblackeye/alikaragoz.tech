@@ -8,7 +8,7 @@ export default function QrCode() {
    <div className="centered-page">
      <div className="qr-menu">
       <div className="qr-img">
-        <Image src={img} alt="qr" />
+        <img src={img} alt="qr" />
       </div>
       <div className="qr-bottom">
         <p className="qr-title">

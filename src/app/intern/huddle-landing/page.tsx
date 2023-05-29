@@ -12,10 +12,10 @@ export default function HuddleLanding() {
       <div className="huddle-landing">
       <div className="huddle-landing-content">
         <div className="top">
-          <Image src={logo} alt="logo" />
+          <img src={logo} alt="logo" />
         </div>
         <div className="middle">
-          <Image src={mockups} alt="logo" />
+          <img src={mockups} alt="logo" />
 
           <div className="content">
             <h1 className="title">Build The Community Your Fans Will Love</h1>
@@ -42,7 +42,7 @@ export default function HuddleLanding() {
           </div>
         </div>
       </div>
-      <Image src={bgDesktop} alt="logo" className="desktop-bg" />
+      <img src={bgDesktop} alt="logo" className="desktop-bg" />
     </div>
     </div>
   );

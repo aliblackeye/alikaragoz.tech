@@ -32,7 +32,7 @@ export default function StatsPreview() {
         </div>
       </div>
       <div className="stats-preview__right">
-        <Image src={img} alt="stats" />
+        <img src={img} alt="stats" />
       </div>
     </div>
     </div>

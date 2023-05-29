@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 // Import Types
-import { Rating } from "@/app/intern/interactive-rating/page";
+import { Rating } from "../page";
 
 // Import Components
 import { FaStar } from "react-icons/fa";
@@ -27,7 +27,10 @@ export default function RatingForm({ setRating }: IRatingForm) {
   };
 
   return (
-    <form className="interactive-rating" onSubmit={(e) => handleSubmit(e)}>
+    <form
+      className="interactive-rating"
+      onSubmit={(e) => handleSubmit(e)}
+    >
       <div className="star circle">
         <FaStar />
       </div>

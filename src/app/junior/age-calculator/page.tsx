@@ -1,7 +1,7 @@
 "use client";
 
-import { DAY_REGEX, MONTH_REGEX, YEAR_REGEX } from "@/common/constants/regex";
-import FormInput from "@/components/form-elements/FormInput";
+import { DAY_REGEX, MONTH_REGEX, YEAR_REGEX } from "@constants/regex";
+import FormInput from "@components/form-elements/FormInput";
 import { BsArrowDown } from "react-icons/bs";
 
 import { useState } from "react";

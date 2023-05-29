@@ -2,8 +2,8 @@
 import FormInput, {
   FormValues,
   IFormInput,
-} from "@/components/form-elements/FormInput";
-import Toast from "@/components/miscs/toast/Toast";
+} from "@components/form-elements/FormInput";
+import Toast from "@components/miscs/toast/Toast";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 

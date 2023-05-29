@@ -1,7 +1,7 @@
 "use client";
 
-import FormInput, { FormValues } from "@/components/form-elements/FormInput";
-import Toast from "@/components/miscs/toast/Toast";
+import FormInput, { FormValues } from "@components/form-elements/FormInput";
+import Toast from "@components/miscs/toast/Toast";
 import { useRouter } from "next/navigation";
 
 import { useState } from "react";

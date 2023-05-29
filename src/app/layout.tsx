@@ -9,8 +9,8 @@ export const metadata = {
 };
 
 // Import Components
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "@layouts/Header";
+import Footer from "@layouts/Footer";
 
 // Import Styles
 import "@assets/styles/base.scss";
@@ -25,8 +25,14 @@ export default function RootLayout({
       <Head>
         <meta charSet="utf-8" />
 
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content={metadata.description} />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1"
+        />
+        <meta
+          name="description"
+          content={metadata.description}
+        />
         <title>{metadata.title}</title>
       </Head>
       <body>

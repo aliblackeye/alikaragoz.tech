@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { FaGithub, FaInstagram, FaLinkedin, FaShare } from "react-icons/fa";
 
 import img from "@assets/images/article.jpg";
@@ -10,7 +9,10 @@ export default function ArticlePreview() {
       <div className="article-preview">
         <div className="left">
           <div className="article-img">
-            <Image src={img} alt="article" />
+            <img
+              src={img}
+              alt="article"
+            />
           </div>
         </div>
         <div className="right">

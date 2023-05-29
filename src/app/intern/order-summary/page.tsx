@@ -8,7 +8,7 @@ export default function OrderSummary() {
     <div className="centered-page">
       <div className="order-summary">
       <div className="order-summary__top">
-        <Image src={img} alt="order" />
+        <img src={img} alt="order" />
       </div>
       <div className="order-summary__bottom">
         <h1 className="title">Order Summary</h1>

@@ -24,7 +24,7 @@ export default function FourCards() {
             <p>Monitors activity to identify project roadblocks</p>
             <div className="card-footer">
               <div className="icon">
-                <Image src={detective} alt="supervisor" />
+                <img src={detective} alt="supervisor" />
               </div>
             </div>
           </div>
@@ -35,7 +35,7 @@ export default function FourCards() {
             <p>Monitors activity to identify project roadblocks</p>
             <div className="card-footer">
               <div className="icon">
-                <Image src={team} alt="team builder" />
+                <img src={team} alt="team builder" />
               </div>
             </div>
           </div>
@@ -44,7 +44,7 @@ export default function FourCards() {
             <p>Monitors activity to identify project roadblocks</p>
             <div className="card-footer">
               <div className="icon">
-                <Image src={lightbulb} alt="karma" />
+                <img src={lightbulb} alt="karma" />
               </div>
             </div>
           </div>
@@ -55,7 +55,7 @@ export default function FourCards() {
             <p>Monitors activity to identify project roadblocks</p>
             <div className="card-footer">
               <div className="icon">
-                <Image src={calculator} alt="calculator" />
+                <img src={calculator} alt="calculator" />
               </div>
             </div>
           </div>

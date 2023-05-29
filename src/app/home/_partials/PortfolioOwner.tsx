@@ -1,8 +1,5 @@
-import {
-  FaGithubSquare,
-  FaInstagram,
-  FaLinkedin,
-} from "react-icons/fa";
+import Image from "next/image";
+import { FaGithubSquare, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export interface IOwner {
   owner: {
@@ -24,7 +21,10 @@ export default function PortfolioOwner(props: IOwner) {
     <div className="portfolio-owner">
       <div className="owner-profile">
         <div className="owner-img">
-          <img src={owner.img} alt={owner.name} />
+          <img
+            src={owner.img}
+            alt={owner.name}
+          />
           <div
             className={`status ${
               status == "available"
@@ -42,13 +42,25 @@ export default function PortfolioOwner(props: IOwner) {
         <h2 className="owner-name">{owner.name}</h2>
         <h4 className="owner-title">{owner.title}</h4>
         <div className="owner-socials">
-          <a href={owner?.socials?.github} target="_blank" rel="noreferrer">
+          <a
+            href={owner?.socials?.github}
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaGithubSquare />
           </a>
-          <a href={owner?.socials?.linkedin} target="_blank" rel="noreferrer">
+          <a
+            href={owner?.socials?.linkedin}
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaLinkedin />
           </a>
-          <a href={owner?.socials?.instagram} target="_blank" rel="noreferrer">
+          <a
+            href={owner?.socials?.instagram}
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaInstagram />
           </a>
         </div>

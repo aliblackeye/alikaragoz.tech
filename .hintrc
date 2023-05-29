@@ -4,6 +4,11 @@
   ],
   "hints": {
     "axe/name-role-value": "off",
-    "button-type": "off"
+    "button-type": "off",
+    "axe/forms": "off",
+    "compat-api/css": "off",
+    "detect-css-reflows/paint": "off",
+    "detect-css-reflows/layout": "off",
+    "detect-css-reflows/composite": "off"
   }
 }
