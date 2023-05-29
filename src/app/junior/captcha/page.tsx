@@ -21,8 +21,6 @@ import Button from "@components/Button";
 import Modal from "@components/Modal";
 import Wallet from "@components/Wallet";
 
-// Import Config
-import CONFIG from "@/config.json";
 
 export default function Home() {
   const [visible, setVisible] = useState(false);
@@ -155,7 +153,7 @@ export default function Home() {
               {/* Cloudflare Turnstile */}
               <div
                 className="cf-turnstile z-50"
-                data-sitekey={CONFIG.SITE_KEY}
+                data-sitekey={process.env.SITE_KEY as string}
                 data-theme="dark"
                 data-response-field-name="captcha_response"
               />
