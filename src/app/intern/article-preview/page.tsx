@@ -2,17 +2,13 @@
 
 import { FaGithub, FaInstagram, FaLinkedin, FaShare } from "react-icons/fa";
 
-import img from "@assets/images/article.jpg";
 export default function ArticlePreview() {
   return (
     <div className="centered-page">
       <div className="article-preview">
         <div className="left">
           <div className="article-img">
-            <img
-              src={img}
-              alt="article"
-            />
+            <img src="assets/images/article.jpg" alt="article" />
           </div>
         </div>
         <div className="right">

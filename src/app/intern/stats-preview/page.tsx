@@ -1,7 +1,3 @@
-import Image from "next/image";
-
-import img from "@assets/images/stats.png";
-
 export default function StatsPreview() {
   return (
     <div className="centered-page">
@@ -32,7 +28,7 @@ export default function StatsPreview() {
         </div>
       </div>
       <div className="stats-preview__right">
-        <img src={img} alt="stats" />
+        <img src={"assets/images/stats.png"} alt="stats" />
       </div>
     </div>
     </div>

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import img from "@images/model.jpeg";
 import { BiChevronRight } from "react-icons/bi";
 export default function BaseApparel() {
@@ -24,7 +23,7 @@ export default function BaseApparel() {
       </div>
       <div className="right">
         <div className="model">
-          <img src={img} alt="model" />
+          <img src={"assets/images/model.jpeg"} alt="model" />
         </div>
       </div>
     </div>

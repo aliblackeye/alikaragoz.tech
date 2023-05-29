@@ -55,7 +55,7 @@ export default function FaqAccordion() {
       <div className="faq-accordion">
       <div className="left">
         <div className="faq-img">
-          <img src={img} alt="faq" />
+          <img src={"assets/images/faq.gif"} alt="faq" />
         </div>
       </div>
       <div className="right">

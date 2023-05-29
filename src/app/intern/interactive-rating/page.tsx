@@ -2,8 +2,6 @@
 
 import { useState } from "react";
 
-import img from "@assets/images/3drating.png";
-
 // Import Components
 import RatingForm from "./_partials/RatingForm";
 
@@ -18,7 +16,7 @@ export default function InteractiveRating() {
         <div className="interactive-rating rated">
           <div className="rating-image">
             <img
-              src={img}
+              src={"assets/images/3drating.png"}
               alt="phone-and-credit-illustrate"
             />
           </div>

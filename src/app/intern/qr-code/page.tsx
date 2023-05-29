@@ -1,14 +1,13 @@
 // Import Next
 import Image from "next/image";
 
-import img from "@assets/images/qrcode.png";
 
 export default function QrCode() {
   return (
    <div className="centered-page">
      <div className="qr-menu">
       <div className="qr-img">
-        <img src={img} alt="qr" />
+        <img src={"assets/images/qrcode.png"} alt="qr" />
       </div>
       <div className="qr-bottom">
         <p className="qr-title">

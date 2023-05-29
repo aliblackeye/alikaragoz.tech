@@ -1,14 +1,11 @@
-import Image from "next/image";
 import { BsMusicNoteBeamed } from "react-icons/bs";
-
-import img from "@assets/images/musician.png";
 
 export default function OrderSummary() {
   return (
     <div className="centered-page">
       <div className="order-summary">
       <div className="order-summary__top">
-        <img src={img} alt="order" />
+        <img src={"assets/images/musician.png"} alt="order" />
       </div>
       <div className="order-summary__bottom">
         <h1 className="title">Order Summary</h1>
