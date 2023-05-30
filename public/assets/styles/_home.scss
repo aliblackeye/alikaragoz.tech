@@ -21,6 +21,7 @@
 
     align-items: center;
     gap: 10px;
+    
   }
 
   .project-container h1 {
@@ -43,6 +44,9 @@
     overflow-y: auto;
     gap: 10px;
     height: 273px;
+    .btn {
+      width: 100%;
+    }
   }
   .portfolio-owner {
     display: flex;
