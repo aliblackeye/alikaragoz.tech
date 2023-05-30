@@ -163,12 +163,16 @@ export default function Home() {
                 <Captcha
                   type="hCaptcha"
                   sitekey={sitekey}
+                  onClose={() => {
+                    console.log("onClose")
+
+                    isVerified ? setIsVerified(true) : setIsVerified(false);
+                  }}
                   onVerify={() => {
-                    isVerified ? setIsVerified(false) : setIsVerified(true);
+                    console.log("onVerify")
+                    setIsVerified(true);
                   }}
-                  onExpire={() => {
-                    setIsVerified(false);
-                  }}
+   
                 />
                 {lastClaimTime && stakeEnd && nextClaim && (
                   <>

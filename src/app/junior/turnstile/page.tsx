@@ -33,7 +33,7 @@ export default function Home() {
   const [stakeEnd, setStakeEnd] = useState<Date | undefined>();
   const [firstDate, setFirstDate] = useState<Date | undefined>();
   const [currentDate, setCurrentDate] = useState<Date | undefined>();
-  const [isVerified, setIsVerified] = useState(false);
+  const [isVerified, setIsVerified] = useState<boolean>(false);
 
   // Modalı açmak için fonksiyon
   const handleVisible = useCallback(() => {
@@ -164,7 +164,7 @@ export default function Home() {
                   type="turnstile"
                   sitekey={sitekey}
                   onVerify={() => {
-                    isVerified ? setIsVerified(false) : setIsVerified(true);
+                    setIsVerified(true);
                   }}
                   onExpire={() => {
                     setIsVerified(false);

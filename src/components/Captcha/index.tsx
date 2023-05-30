@@ -3,21 +3,24 @@ import Turnstile from "react-turnstile";
 
 interface CaptchaProps {
   sitekey: string;
-  onVerify: (token?: string, ekey?: string) => void;
+  onVerify: (token?: string, sessionId?: string) => void;
   onExpire?: () => void;
+  onClose?: () => void;
   theme?: "light" | "dark";
   type: "hCaptcha" | "reCaptcha" | "turnstile";
 }
 
 export default function Captcha(props: CaptchaProps) {
-  const { theme = "dark", type, onVerify, sitekey, onExpire } = props;
+  const { theme = "dark", type, onVerify, sitekey, onExpire, onClose } = props;
 
   switch (type) {
     case "hCaptcha":
       return (
         <HCaptcha
           sitekey={sitekey}
-          onVerify={(token, ekey) => onVerify(token, ekey)}
+          onVerify={(token, sessionId) => onVerify(token, sessionId)}
+          onClose={onClose}
+          theme={theme}
         />
       );
     case "reCaptcha":
