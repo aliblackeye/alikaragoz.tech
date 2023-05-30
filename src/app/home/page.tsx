@@ -114,7 +114,8 @@ export default function Home() {
     },
     { name: "Age Calculator", path: "junior/age-calculator" },
     { name: "News Page", path: "junior/news-page" },
-    { name: "Captcha", path: "junior/captcha" },
+    { name: "Turnstile", path: "junior/turnstile" },
+    { name: "hCaptcha", path: "junior/hCaptcha" },
   ];
 
   const mid: IProject[] = [];

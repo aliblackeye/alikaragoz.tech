@@ -5,8 +5,8 @@ import { Poppins } from "next/font/google";
 import "react-toastify/dist/ReactToastify.css";
 
 export const metadata: Metadata = {
-  title: "Stake: Crypto & Sports Betting - BTC Casion Online",
-  description: "Stake is the best crypto casino & sports betting site.",
+  title: "Black Casino: Crypto & Sports Betting - BTC Casino Online",
+  description: "Black Casino is the best crypto casino & sports betting site.",
 };
 
 export default function CaptchaLayout({

@@ -161,6 +161,7 @@ export default function Home() {
                 />
                 {/* Cloudflare Turnstile */}
                 <Captcha
+                  type="turnstile"
                   sitekey={sitekey}
                   onVerify={() => {
                     isVerified ? setIsVerified(false) : setIsVerified(true);
@@ -187,7 +188,9 @@ export default function Home() {
           footer={
             <>
               <div className="flex justify-center items-center bg-[#10212d] text-[#9fa8be] font-semibold rounded-b-xl p-8">
-                <p>{"Black Casino'da VIP olma hakkında daha fazla bilgi edin"}</p>
+                <p>
+                  {"Black Casino'da VIP olma hakkında daha fazla bilgi edin"}
+                </p>
               </div>
             </>
           }
