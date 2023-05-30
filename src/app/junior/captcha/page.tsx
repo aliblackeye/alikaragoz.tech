@@ -21,7 +21,6 @@ import Button from "@components/Button";
 import Modal from "@components/Modal";
 import Wallet from "@components/Wallet";
 
-
 export default function Home() {
   const [visible, setVisible] = useState(false);
   const [lastClaimTime, setLastClaimTime] = useState<Date | undefined>();
@@ -70,6 +69,7 @@ export default function Home() {
     [currentDate, nextClaim, lastClaimTime]
   );
 
+  // UseEffects
   useEffect(() => {
     setFirstDate(new Date());
   }, []);
@@ -96,11 +96,10 @@ export default function Home() {
   }, [firstDate, lastClaimTime]);
 
   return (
-    <>
+    <div className="captcha-page">
       <Script
         src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-        defer
-        async
+        strategy="lazyOnload"
       ></Script>
       <ToastContainer />
 
@@ -180,6 +179,6 @@ export default function Home() {
           </>
         }
       />
-    </>
+    </div>
   );
 }

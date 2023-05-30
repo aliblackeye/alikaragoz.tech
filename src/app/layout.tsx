@@ -1,6 +1,7 @@
 // Import Next
 import Head from "next/head";
 
+
 // Metadata
 export const metadata = {
   title: "Ali Karagöz | Portfolio ",
@@ -36,6 +37,7 @@ export default function RootLayout({
         <title>{metadata.title}</title>
       </Head>
       <body>
+
         <Header />
         <main>{children}</main>
         <Footer />

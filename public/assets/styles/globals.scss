@@ -6,8 +6,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Outfit", sans-serif;
   user-select: none;
+  font-family: "Outfit", sans-serif;
+}
+
+html,
+body,
+:root {
+  background-color: #000;
+  user-select: none;
+  color: #fff;
+  height: 100%;
 }
 
 body {
@@ -42,72 +51,6 @@ a {
   max-width: 1280px;
   margin: 0 auto;
   padding: 10px 20px;
-}
-
-.btn {
-  padding: 15px 20px;
-  border-radius: 5px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 500;
-  width: 100%;
-  transition: all 0.3s ease;
-  color: #fff;
-
-  &-primary {
-    background-color: #613bc2;
-    &:hover {
-      background-color: #5433a8;
-    }
-  }
-
-  &-info {
-    background-color: #045cb9;
-    &:hover {
-      background-color: #03519e;
-    }
-  }
-
-  &-secondary {
-    background-color: #6c757d;
-
-    &:hover {
-      background-color: #5a6268;
-    }
-  }
-
-  &-success {
-    background-color: #1c7631;
-
-    &:hover {
-      background-color: #155724;
-    }
-  }
-
-  &-warning {
-    background-color: #c7a008;
-
-    &:hover {
-      background-color: #a28f07;
-    }
-  }
-
-  &-purple {
-    background-color: #6b3be3;
-    &:hover {
-      background-color: #5731b6;
-    }
-  }
-
-  &-danger {
-    background-color: #b62c3a;
-
-    &:hover {
-      background-color: #88212a;
-    }
-  }
 }
 
 .centered-page {
