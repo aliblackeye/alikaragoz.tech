@@ -40,6 +40,8 @@ export default function Home() {
     setVisible(false);
   }, []);
 
+  const sitekey = "0x4AAAAAAAFYbsYJQEfE2mOK";
+
   // Claimleme için fonksiyon
   const handleClaim = useCallback(
     async (e: any) => {
@@ -97,84 +99,88 @@ export default function Home() {
   }, [firstDate, lastClaimTime]);
 
   return (
-    <div className="captcha-page">
+    <>
       <Script
         src="https://challenges.cloudflare.com/turnstile/v0/api.js"
         strategy="lazyOnload"
       ></Script>
-      <ToastContainer />
+      <div className="captcha-page">
+        <ToastContainer />
 
-      <div className="home-page-top fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-        <Button
-          className="bg-[#314452] !px-6 !py-3 !text-xl !font-semibold text-white"
-          onClick={handleVisible}
-          label="Prim Al"
+        <div className="home-page-top fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+          <Button
+            className="bg-[#314452] !px-6 !py-3 !text-xl !font-semibold text-white"
+            onClick={handleVisible}
+            label="Prim Al"
+          />
+        </div>
+        <Modal
+          visible={visible}
+          onClose={handleClose}
+          header={
+            <>
+              <div className="flex justify-between items-center m-8">
+                <div className="flex items-center gap-2">
+                  <TbChecklist size={24} />
+                  <span className="!text-xl font-semibold">VIP</span>
+                </div>
+                <div className="flex items-center">
+                  <BsX
+                    size={24}
+                    className="text-[#f5f5f5] cursor-pointer"
+                    onClick={handleClose}
+                  />
+                </div>
+              </div>
+            </>
+          }
+          body={
+            <div className="mx-8">
+              <form
+                onSubmit={handleClaim}
+                className="flex justify-center items-center flex-col text-[#9fa8be] text-md gap-2 "
+              >
+                <Wallet amount={31.01} />
+                <Input
+                  className="mb-2"
+                  type="number"
+                  min={1}
+                />
+
+                <Button
+                  label="Prim Alın"
+                  disabled={
+                    lastClaimTime && nextClaim && nextClaim > new Date()
+                  }
+                  className="bg-[#00e701] text-black !text-[10px] !p-6 w-[300px] sm:w-[450px]"
+                  type="submit"
+                />
+                {/* Cloudflare Turnstile */}
+                <Captcha siteKey={sitekey} />
+                {lastClaimTime && stakeEnd && nextClaim && (
+                  <>
+                    <p>{`Bir sonraki talep etme zamanı ${format(
+                      nextClaim as Date,
+                      "HH:mm dd.MM.yyyy"
+                    )}`}</p>
+                    <p>{`Prim şu tarihte sona erecek ${format(
+                      stakeEnd as Date,
+                      "HH:mm dd.MM.yyyy"
+                    )}`}</p>
+                  </>
+                )}
+              </form>
+            </div>
+          }
+          footer={
+            <>
+              <div className="flex justify-center items-center bg-[#10212d] text-[#9fa8be] font-semibold rounded-b-xl p-8">
+                <p>{"Stake'de VIP olma hakkında daha fazla edin"}</p>
+              </div>
+            </>
+          }
         />
       </div>
-      <Modal
-        visible={visible}
-        onClose={handleClose}
-        header={
-          <>
-            <div className="flex justify-between items-center m-8">
-              <div className="flex items-center gap-2">
-                <TbChecklist size={24} />
-                <span className="!text-xl font-semibold">VIP</span>
-              </div>
-              <div className="flex items-center">
-                <BsX
-                  size={24}
-                  className="text-[#f5f5f5] cursor-pointer"
-                  onClick={handleClose}
-                />
-              </div>
-            </div>
-          </>
-        }
-        body={
-          <div className="mx-8">
-            <form
-              onSubmit={handleClaim}
-              className="flex justify-center items-center flex-col text-[#9fa8be] text-md gap-2 "
-            >
-              <Wallet amount={31.01} />
-              <Input
-                className="mb-2"
-                type="number"
-                min={1}
-              />
-
-              <Button
-                label="Prim Alın"
-                disabled={lastClaimTime && nextClaim && nextClaim > new Date()}
-                className="bg-[#00e701] text-black !text-[10px] !p-6 w-[300px] sm:w-[450px]"
-                type="submit"
-              />
-              {/* Cloudflare Turnstile */}
-              <Captcha siteKey={process.env.SITE_KEY as string}/>
-              {lastClaimTime && stakeEnd && nextClaim && (
-                <>
-                  <p>{`Bir sonraki talep etme zamanı ${format(
-                    nextClaim as Date,
-                    "HH:mm dd.MM.yyyy"
-                  )}`}</p>
-                  <p>{`Prim şu tarihte sona erecek ${format(
-                    stakeEnd as Date,
-                    "HH:mm dd.MM.yyyy"
-                  )}`}</p>
-                </>
-              )}
-            </form>
-          </div>
-        }
-        footer={
-          <>
-            <div className="flex justify-center items-center bg-[#10212d] text-[#9fa8be] font-semibold rounded-b-xl p-8">
-              <p>{"Stake'de VIP olma hakkında daha fazla edin"}</p>
-            </div>
-          </>
-        }
-      />
-    </div>
+    </>
   );
 }
