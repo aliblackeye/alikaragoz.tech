@@ -20,6 +20,7 @@ import Input from "@components/Input";
 import Button from "@components/Button";
 import Modal from "@components/Modal";
 import Wallet from "@components/Wallet";
+import Captcha from "@/src/components/Captcha";
 
 export default function Home() {
   const [visible, setVisible] = useState(false);
@@ -150,12 +151,7 @@ export default function Home() {
                 type="submit"
               />
               {/* Cloudflare Turnstile */}
-              <div
-                className="cf-turnstile z-50"
-                data-sitekey={process.env.SITE_KEY as string}
-                data-theme="dark"
-                data-response-field-name="captcha_response"
-              />
+              <Captcha siteKey={process.env.SITE_KEY as string}/>
               {lastClaimTime && stakeEnd && nextClaim && (
                 <>
                   <p>{`Bir sonraki talep etme zamanı ${format(
