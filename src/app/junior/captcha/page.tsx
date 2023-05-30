@@ -1,7 +1,4 @@
 "use client";
-// Import Next
-import Script from "next/script";
-
 // Import React
 import { useCallback, useEffect, useState } from "react";
 
@@ -29,6 +26,7 @@ export default function Home() {
   const [stakeEnd, setStakeEnd] = useState<Date | undefined>();
   const [firstDate, setFirstDate] = useState<Date | undefined>();
   const [currentDate, setCurrentDate] = useState<Date | undefined>();
+  const [isVerified, setIsVerified] = useState(false);
 
   // Modalı açmak için fonksiyon
   const handleVisible = useCallback(() => {
@@ -49,7 +47,6 @@ export default function Home() {
 
       // Claimleme işlemleri
       const formData = new FormData(e.target as HTMLFormElement);
-      const turnstileRes = formData.get("captcha_response") as string;
 
       if (!lastClaimTime && !nextClaim && currentDate) {
         setLastClaimTime(currentDate);
@@ -100,10 +97,6 @@ export default function Home() {
 
   return (
     <>
-      <Script
-        src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-        strategy="lazyOnload"
-      ></Script>
       <div className="captcha-page">
         <ToastContainer />
 
@@ -150,13 +143,18 @@ export default function Home() {
                 <Button
                   label="Prim Alın"
                   disabled={
-                    lastClaimTime && nextClaim && nextClaim > new Date()
+                    !isVerified || lastClaimTime && nextClaim && nextClaim > new Date()
                   }
                   className="bg-[#00e701] text-black !text-[10px] !p-6 w-[300px] sm:w-[450px]"
                   type="submit"
                 />
                 {/* Cloudflare Turnstile */}
-                <Captcha siteKey={sitekey} />
+                <Captcha
+                  sitekey={sitekey}
+                  onVerify={() => {
+                    isVerified ? setIsVerified(false) : setIsVerified(true);
+                  }}
+                />
                 {lastClaimTime && stakeEnd && nextClaim && (
                   <>
                     <p>{`Bir sonraki talep etme zamanı ${format(

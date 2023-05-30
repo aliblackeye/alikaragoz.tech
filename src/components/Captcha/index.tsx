@@ -1,16 +1,11 @@
-interface CaptchaProps {
-  siteKey: string;
-}
+import Turnstile, { TurnstileProps } from "react-turnstile";
+
+interface CaptchaProps extends TurnstileProps {}
 
 export default function Captcha(props: CaptchaProps) {
-  const { siteKey } = props;
-  console.log("SITE_KEY:",siteKey);
-    return (
-      <div
-        className="cf-turnstile"
-        data-sitekey={siteKey}
-        data-theme="dark"
-      ></div>
-    );
-
+  return (
+    <Turnstile
+      {...props}
+    />
+  );
 }
