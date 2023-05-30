@@ -8,10 +8,10 @@ export default function HuddleLanding() {
       <div className="huddle-landing">
       <div className="huddle-landing-content">
         <div className="top">
-          <img src={"assets/images/huddle-logo.svg"} alt="logo" />
+          <img src={"/assets/images/huddle-logo.svg"} alt="logo" />
         </div>
         <div className="middle">
-          <img src={"assets/images/huddle-illustration-mockups.svg"} alt="logo" />
+          <img src={"/assets/images/huddle-illustration-mockups.svg"} alt="logo" />
 
           <div className="content">
             <h1 className="title">Build The Community Your Fans Will Love</h1>
@@ -38,7 +38,7 @@ export default function HuddleLanding() {
           </div>
         </div>
       </div>
-      <img src={"assets/images/huddle-bg-desktop.svg"} alt="logo" className="desktop-bg" />
+      <img src={"/assets/images/huddle-bg-desktop.svg"} alt="logo" className="desktop-bg" />
     </div>
     </div>
   );

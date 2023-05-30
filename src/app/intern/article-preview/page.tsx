@@ -8,7 +8,7 @@ export default function ArticlePreview() {
       <div className="article-preview">
         <div className="left">
           <div className="article-img">
-            <img src="assets/images/article.jpg" alt="article" />
+            <img src="/assets/images/article.jpg" alt="article" />
           </div>
         </div>
         <div className="right">

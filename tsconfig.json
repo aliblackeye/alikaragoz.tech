@@ -25,7 +25,7 @@
       "@hooks/*": ["./src/hooks/*"],
       "@utils/*": ["./src/utils/*"],
       "src/*": ["./src/*"],
-      "@images/*": ["./public/assets/images/*"],
+      "@images/*": ["./public//assets/images/*"],
       "@styles/*": ["./public/assets/styles/*"],
       "@components/*": ["./src/components/*"],
       "@assets/*": ["./public/assets/*"],

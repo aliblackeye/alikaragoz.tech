@@ -28,7 +28,7 @@ export default function StatsPreview() {
         </div>
       </div>
       <div className="stats-preview__right">
-        <img src={"assets/images/stats.png"} alt="stats" />
+        <img src={"/assets/images/stats.png"} alt="stats" />
       </div>
     </div>
     </div>

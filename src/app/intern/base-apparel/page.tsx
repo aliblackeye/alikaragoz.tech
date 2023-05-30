@@ -23,7 +23,7 @@ export default function BaseApparel() {
       </div>
       <div className="right">
         <div className="model">
-          <img src={"assets/images/model.jpeg"} alt="model" />
+          <img src={"/assets/images/model.jpeg"} alt="model" />
         </div>
       </div>
     </div>

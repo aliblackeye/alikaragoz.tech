@@ -1,6 +1,6 @@
 "use client";
 
-import img from "@assets/images/faq.gif";
+import img from "@/assets/images/faq.gif";
 import Image from "next/image";
 
 import { IoIosArrowUp } from "react-icons/io";
@@ -55,7 +55,7 @@ export default function FaqAccordion() {
       <div className="faq-accordion">
       <div className="left">
         <div className="faq-img">
-          <img src={"assets/images/faq.gif"} alt="faq" />
+          <img src={"/assets/images/faq.gif"} alt="faq" />
         </div>
       </div>
       <div className="right">

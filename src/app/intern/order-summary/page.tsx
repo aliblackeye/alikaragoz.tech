@@ -5,7 +5,7 @@ export default function OrderSummary() {
     <div className="centered-page">
       <div className="order-summary">
       <div className="order-summary__top">
-        <img src={"assets/images/musician.png"} alt="order" />
+        <img src={"/assets/images/musician.png"} alt="order" />
       </div>
       <div className="order-summary__bottom">
         <h1 className="title">Order Summary</h1>

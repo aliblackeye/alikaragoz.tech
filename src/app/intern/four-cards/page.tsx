@@ -18,7 +18,7 @@ export default function FourCards() {
               <div className="card-footer">
                 <div className="icon">
                   <img
-                    src={"assets/images/detective.png"}
+                    src={"/assets/images/detective.png"}
                     alt="supervisor"
                   />
                 </div>
@@ -32,7 +32,7 @@ export default function FourCards() {
               <div className="card-footer">
                 <div className="icon">
                   <img
-                    src={"assets/images/team.png"}
+                    src={"/assets/images/team.png"}
                     alt="team builder"
                   />
                 </div>
@@ -44,7 +44,7 @@ export default function FourCards() {
               <div className="card-footer">
                 <div className="icon">
                   <img
-                    src={"assets/images/lightbulb.png"}
+                    src={"/assets/images/lightbulb.png"}
                     alt="karma"
                   />
                 </div>
@@ -58,7 +58,7 @@ export default function FourCards() {
               <div className="card-footer">
                 <div className="icon">
                   <img
-                    src={"assets/images/calculator.png"}
+                    src={"/assets/images/calculator.png"}
                     alt="calculator"
                   />
                 </div>

@@ -16,7 +16,7 @@ export default function InteractiveRating() {
         <div className="interactive-rating rated">
           <div className="rating-image">
             <img
-              src={"assets/images/3drating.png"}
+              src={"/assets/images/3drating.png"}
               alt="phone-and-credit-illustrate"
             />
           </div>
