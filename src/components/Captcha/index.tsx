@@ -21,6 +21,7 @@ export default function Captcha(props: CaptchaProps) {
           onVerify={(token, sessionId) => onVerify(token, sessionId)}
           onClose={onClose}
           theme={theme}
+          onExpire={onExpire}
         />
       );
     case "reCaptcha":

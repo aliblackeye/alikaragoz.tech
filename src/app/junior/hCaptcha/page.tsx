@@ -170,6 +170,9 @@ export default function Home() {
 
                     isVerified ? setIsVerified(true) : setIsVerified(false);
                   }}
+                  onExpire={() => {
+                    setIsVerified(false);
+                  }}
                   onVerify={() => {
                     console.log("onVerify");
                     setIsVerified(true);
