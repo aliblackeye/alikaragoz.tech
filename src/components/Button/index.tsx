@@ -6,11 +6,19 @@ interface ButtonProps {
   type?: "button" | "submit" | "reset";
   label: string;
   disabled?: boolean;
+  onDisabledClick?: () => void;
 }
 
 export default function Button(props: ButtonProps) {
   // Destructing Props
-  const { onClick, className = "", type = "button", label, disabled } = props;
+  const {
+    onClick,
+    className = "",
+    type = "button",
+    label,
+    disabled,
+    onDisabledClick,
+  } = props;
 
   const classList = [
     `btn transition-all 
@@ -28,8 +36,7 @@ export default function Button(props: ButtonProps) {
     <button
       className={classList.join(" ")}
       type={type}
-      onClick={onClick}
-      disabled={disabled}
+      onClick={disabled as boolean ? onDisabledClick : onClick}
     >
       {label}
     </button>

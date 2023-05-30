@@ -20,6 +20,13 @@ import Wallet from "@components/Wallet";
 import Captcha from "@/src/components/Captcha";
 
 export default function Home() {
+  // Variables
+  const claimSuccessToast = () => toast.success("Prim alındı!");
+  const claimWaitToast = () =>
+    toast.warn("Bir sonraki talep etme zamanı gelene kadar bekleyin!");
+  const claimValidateToast = () => toast.warn("Lütfen captcha doğrulayın!");
+
+  // States
   const [visible, setVisible] = useState(false);
   const [lastClaimTime, setLastClaimTime] = useState<Date | undefined>();
   const [nextClaim, setNextClaim] = useState<Date | undefined>();
@@ -44,14 +51,13 @@ export default function Home() {
   const handleClaim = useCallback(
     async (e: any) => {
       e.preventDefault();
-
       // Claimleme işlemleri
       const formData = new FormData(e.target as HTMLFormElement);
 
       if (!lastClaimTime && !nextClaim && currentDate) {
         setLastClaimTime(currentDate);
         setNextClaim(addMinutes(currentDate, 1));
-        toast.success("Claim successful!");
+        claimSuccessToast();
         return;
       }
 
@@ -63,7 +69,7 @@ export default function Home() {
       ) {
         setLastClaimTime(nextClaim);
         setNextClaim(addMinutes(currentDate, 1));
-        toast.success("Claim successful!");
+        claimSuccessToast();
       }
     },
     [currentDate, nextClaim, lastClaimTime]
@@ -143,8 +149,13 @@ export default function Home() {
                 <Button
                   label="Prim Alın"
                   disabled={
-                    !isVerified || lastClaimTime && nextClaim && nextClaim > new Date()
+                    !isVerified ||
+                    (lastClaimTime && nextClaim && nextClaim > new Date())
                   }
+                  onDisabledClick={() => {
+                    !isVerified ? claimValidateToast() : claimWaitToast();
+                    return;
+                  }}
                   className="bg-[#00e701] text-black !text-[10px] !p-6 w-[300px] sm:w-[450px]"
                   type="submit"
                 />
@@ -153,6 +164,9 @@ export default function Home() {
                   sitekey={sitekey}
                   onVerify={() => {
                     isVerified ? setIsVerified(false) : setIsVerified(true);
+                  }}
+                  onExpire={() => {
+                    setIsVerified(false);
                   }}
                 />
                 {lastClaimTime && stakeEnd && nextClaim && (
@@ -173,7 +187,7 @@ export default function Home() {
           footer={
             <>
               <div className="flex justify-center items-center bg-[#10212d] text-[#9fa8be] font-semibold rounded-b-xl p-8">
-                <p>{"Stake'de VIP olma hakkında daha fazla edin"}</p>
+                <p>{"Black Casino'da VIP olma hakkında daha fazla bilgi edin"}</p>
               </div>
             </>
           }
