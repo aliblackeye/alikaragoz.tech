@@ -51,25 +51,31 @@ export default function Home() {
   const handleClaim = useCallback(
     async (e: any) => {
       e.preventDefault();
-      // Claimleme işlemleri
-      const formData = new FormData(e.target as HTMLFormElement);
+      if (isVerified) {
+        // Claimleme işlemleri
+        const formData = new FormData(e.target as HTMLFormElement);
 
-      if (!lastClaimTime && !nextClaim && currentDate) {
-        setLastClaimTime(currentDate);
-        setNextClaim(addMinutes(currentDate, 1));
-        claimSuccessToast();
-        return;
+        if (!lastClaimTime && !nextClaim && currentDate) {
+          setLastClaimTime(currentDate);
+          setNextClaim(addMinutes(currentDate, 1));
+          claimSuccessToast();
+          return;
+        }
+
+        if (
+          lastClaimTime &&
+          nextClaim &&
+          currentDate &&
+          currentDate >= nextClaim
+        ) {
+          setLastClaimTime(nextClaim);
+          setNextClaim(addMinutes(currentDate, 1));
+          claimSuccessToast();
+        }
       }
 
-      if (
-        lastClaimTime &&
-        nextClaim &&
-        currentDate &&
-        currentDate >= nextClaim
-      ) {
-        setLastClaimTime(nextClaim);
-        setNextClaim(addMinutes(currentDate, 1));
-        claimSuccessToast();
+      if (!isVerified) {
+        claimValidateToast();
       }
     },
     [currentDate, nextClaim, lastClaimTime]
@@ -152,10 +158,6 @@ export default function Home() {
                     !isVerified ||
                     (lastClaimTime && nextClaim && nextClaim > new Date())
                   }
-                  onDisabledClick={() => {
-                    !isVerified ? claimValidateToast() : claimWaitToast();
-                    return;
-                  }}
                   className="bg-[#00e701] text-black !text-[10px] !p-6 w-[300px] sm:w-[450px]"
                   type="submit"
                 />
@@ -164,15 +166,14 @@ export default function Home() {
                   type="hCaptcha"
                   sitekey={sitekey}
                   onClose={() => {
-                    console.log("onClose")
+                    console.log("onClose");
 
                     isVerified ? setIsVerified(true) : setIsVerified(false);
                   }}
                   onVerify={() => {
-                    console.log("onVerify")
+                    console.log("onVerify");
                     setIsVerified(true);
                   }}
-   
                 />
                 {lastClaimTime && stakeEnd && nextClaim && (
                   <>
@@ -192,7 +193,9 @@ export default function Home() {
           footer={
             <>
               <div className="flex justify-center items-center bg-[#10212d] text-[#9fa8be] font-semibold rounded-b-xl p-8">
-                <p>{"Black Casino'da VIP olma hakkında daha fazla bilgi edin"}</p>
+                <p>
+                  {"Black Casino'da VIP olma hakkında daha fazla bilgi edin"}
+                </p>
               </div>
             </>
           }
