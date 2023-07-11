@@ -10,6 +10,8 @@ import bg3 from "./bg-pattern-3.svg";
 import phone from "./phone.png";
 
 export default function WorkitLandingPage() {
+
+  useEffect(() => {
     window.addEventListener("scroll", () => {
       const header = document.querySelector(".workit-landing-page .header");
       if (header && window.scrollY > 30) {
@@ -28,6 +30,7 @@ export default function WorkitLandingPage() {
         );
       }
     });
+  }, []);
 
   return (
     <section className="workit-landing-page  bg-[#fcf8ff] text-[#24053E] relative">
@@ -143,7 +146,7 @@ export default function WorkitLandingPage() {
               company. Apply for access below and I’ll be in touch to schedule a
               call.`}
             </p>
-            <button className="px-8 !rounded-lg py-4 bg-[#44FFA1] !border-2 border-[#44FFA1] hover:!bg-transparent !text-[#24053E] hover:!text-white !rounded-none duration-300">
+            <button className="px-8 !rounded-lg py-4 bg-[#44FFA1] !border-2 border-[#44FFA1] hover:!bg-transparent !text-[#24053E] hover:!text-white  duration-300">
               Apply for access
             </button>
           </div>
