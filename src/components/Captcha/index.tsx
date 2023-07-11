@@ -1,3 +1,4 @@
+
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import Turnstile from "react-turnstile";
 
@@ -10,6 +11,8 @@ interface CaptchaProps {
   type: "hCaptcha" | "reCaptcha" | "turnstile";
 }
 
+import { BoundTurnstileObject } from "react-turnstile";
+
 export default function Captcha(props: CaptchaProps) {
   const { theme = "dark", type, onVerify, sitekey, onExpire, onClose } = props;
 
@@ -18,7 +21,7 @@ export default function Captcha(props: CaptchaProps) {
       return (
         <HCaptcha
           sitekey={sitekey}
-          onVerify={(token, sessionId) => onVerify(token, sessionId)}
+          onVerify={(token: string, sessionId: string) => onVerify(token, sessionId)}
           onClose={onClose}
           theme={theme}
           onExpire={onExpire}
@@ -30,7 +33,7 @@ export default function Captcha(props: CaptchaProps) {
       return (
         <Turnstile
           sitekey={sitekey}
-          onVerify={onVerify}
+          onVerify={(token: string, boundTurnstile: BoundTurnstileObject) => onVerify(token)}
           onExpire={onExpire}
           theme={theme}
         />
