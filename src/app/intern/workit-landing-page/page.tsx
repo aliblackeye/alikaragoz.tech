@@ -23,7 +23,7 @@ export default function WorkitLandingPage() {
         );
       } else {
         header?.classList.remove(
-          "border-white",
+          "!border-white",
           "!bg-white",
           "!text-[#24053E]",
           "!drop-shadow-2xl"
@@ -34,7 +34,7 @@ export default function WorkitLandingPage() {
 
   return (
     <section className="workit-landing-page  bg-[#fcf8ff] text-[#24053E] relative">
-      <header className="header sticky top-0 left-0  duration-300 border-b-2 border-b-transparent z-[5000]  bg-[#24053E] rounded-b-2xl">
+      <header className="header sticky top-0 left-0  duration-300 border-b-2 border-b-transparent z-[5000]  bg-[#24053E] text-white rounded-b-2xl">
         <div className="header-container container flex justify-between items-center">
           <div className="title">
             <h1 className="text-[36px]  font-bold leading-none">
