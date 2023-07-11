@@ -33,6 +33,10 @@ export default function Home() {
 
   const intern: IProject[] = [
     {
+      name: "Workit Landing Page",
+      path: "intern/workit-landing-page",
+    },
+    {
       name: "Results Summary",
       path: "intern/results-summary",
     },
