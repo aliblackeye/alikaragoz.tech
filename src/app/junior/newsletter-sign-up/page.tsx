@@ -10,7 +10,7 @@ export default function NewsletterSignUp() {
     error: false,
   });
 
-  const [subscribed, setSubscribed] = useState(true);
+  const [subscribed, setSubscribed] = useState(false);
 
   const handleInputChange = (e: any) => {
     e.preventDefault();
