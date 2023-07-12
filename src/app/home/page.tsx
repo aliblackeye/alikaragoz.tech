@@ -120,6 +120,7 @@ export default function Home() {
     { name: "News Page", path: "junior/news-page" },
     { name: "Turnstile", path: "junior/turnstile" },
     { name: "hCaptcha", path: "junior/hCaptcha" },
+    { name: "Newsletter Sign Up", path: "junior/newsletter-sign-up" },
   ];
 
   const mid: IProject[] = [];
